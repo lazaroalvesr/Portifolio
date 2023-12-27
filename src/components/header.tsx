@@ -28,7 +28,7 @@ export function Header() {
             <span className={`hamburguer   ? 'ativo' : ''} z-50 right-6 text-black`}></span>
           </button>
           <ul
-            className={`text-gray-900 flex gap-4 absolute transition-all lg:static lg:h-auto 
+            className={`text-gray-900 bg-gray-300 flex gap-4 absolute transition-all lg:static lg:h-auto 
               right-0 m-auto items-center justify-center 
               left-0 -top-[158px]  ${ativo ?
                 'w-[370px] border-t-2 border-gray-700 md:w-full h-44 z-50 rounded-xl grid grid-cols-3 pt-4' : 'h-0 overflow-hidden'
