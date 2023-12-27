@@ -35,7 +35,7 @@ export function Sobre() {
       id="Sobre">
       <div
         id="items"
-        className="max-w-5xl lg:mt-47 mt-32 m-auto">
+        className="max-w-5xl lg:mt-32 mt-80 m-auto">
         <div className="">
           <div className="text-center items-center">
             <h1 className="text-3xl dark:text-gray-50 text-gray-900">Sobre</h1>
