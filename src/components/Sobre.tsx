@@ -42,7 +42,7 @@ export function Sobre() {
             <p className="dark:text-gray-50 text-gray-900">Minha Introdução</p>
           </div>
           <div className="lg:flex lg:flex-row flex-col mt-12 mb-32">
-            <div className="ml-8 w-64 lg:w-[300px] lg:ml-0 mb-6 lg:mr-20 mr-0 lg:mb-0">
+            <div className="ml-20 w-64 lg:w-[300px] lg:ml-0 mb-6 lg:mr-20 mr-0 lg:mb-0">
               <Image
                 src="/img/code.svg"
                 alt="Pessoa sentada em uma cadeira mexendo em um Computador"
@@ -52,19 +52,19 @@ export function Sobre() {
             </div>
             <div className="lg:ml-20 ml-4 flex flex-col">
               <div className="flex gap-2">
-                <div className="lg:w-28 w-[100px] border-gray-500 flex  items-center justify-center border-2 h-24 rounded-md">
+                <div className="lg:w-28 w-[112px] border-gray-500 flex  items-center justify-center border-2 h-24 rounded-md">
                   <RiReactjsLine className="text-blue-500" size="42px" />
 
                 </div>
-                <div className="lg:w-28 w-[100px] border-gray-500 flex items-center justify-center border-2 h-24 rounded-md">
+                <div className="lg:w-28 w-[112px] border-gray-500 flex items-center justify-center border-2 h-24 rounded-md">
                   <SiTailwindcss className="text-blue-500" size="42px" />
                 </div>
-                <div className="lg:w-28 w-[100px] border-gray-500 flex items-center justify-center border-2 h-24 rounded-md">
+                <div className="lg:w-28 w-[112px] border-gray-500 flex items-center justify-center border-2 h-24 rounded-md">
                   <SiTypescript className="text-blue-500" size="42" />
                 </div>
               </div>
               <div className="lg:w-[440px] mt-12">
-                <p className="mb-7 w-[320px] lg:w-[400px] pr-3 dark:text-gray-50 text-gray-900">Com experiência em HTML, CSS,
+                <p className="mb-7 w-[390px] lg:w-[400px] pr-3 dark:text-gray-50 text-gray-900">Com experiência em HTML, CSS,
                   Tailwind, JavaScript, TypeScript
                   e ReactJS e sólido conhecimento em SQL,
                   PostgreSQL. Comprometido com o desenvolvimento
