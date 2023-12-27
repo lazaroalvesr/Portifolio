@@ -64,7 +64,7 @@ export function Sobre() {
                 </div>
               </div>
               <div className="lg:w-[440px] mt-12">
-                <p className="mb-7 w-[390px] lg:w-[400px] pr-3 dark:text-gray-50 text-gray-900">Com experiência em HTML, CSS,
+                <p className="mb-7 w-[320px] lg:w-[400px] pr-3 dark:text-gray-50 text-gray-900">Com experiência em HTML, CSS,
                   Tailwind, JavaScript, TypeScript
                   e ReactJS e sólido conhecimento em SQL,
                   PostgreSQL. Comprometido com o desenvolvimento
