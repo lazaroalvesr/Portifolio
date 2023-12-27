@@ -37,7 +37,6 @@ export function Header() {
             <li className='lg:text-xl text-base lg:font-normal font-semibold '>
               <Link href="/">
                 <div className='lg:hidden w-7 ml-12 md:ml-28'>
-                  {/* <HomeIcon /> */}
                 </div>
                 Home
               </Link>
@@ -45,15 +44,13 @@ export function Header() {
             <li className='lg:text-xl text-base lg:font-normal font-semibold'>
               <Link href="#Sobre">
                 <div className='lg:hidden w-7 ml-12 md:ml-28'>
-                  {/* <UserIcon /> */}
                 </div>
                 Sobre
               </Link>
             </li>
             <li className='lg:text-xl text-base -ml-9 lg:-m-0 lg:font-normal font-semibold'>
-              <Link href="#Portifolio" className=''>
+              <Link href="#portifolio" className=''>
                 <div className='lg:hidden w-7 ml-16 md:ml-28'>
-                  {/* <PortifolioIcon /> */}
                 </div>
                 Portifolio
               </Link>
@@ -61,7 +58,6 @@ export function Header() {
             <li className='lg:text-xl text-base lg:font-normal font-semibold'>
               <Link href="#Skills" className='ml-2'>
                 <div className='lg:hidden w-7 ml-12 md:ml-28'>
-                  {/* <SkillsIcon /> */}
                 </div>
                 Skills
               </Link>
@@ -69,7 +65,6 @@ export function Header() {
             <li className='lg:text-xl text-base lg:font-normal font-semibold'>
               <Link href="#Contato">
                 <div className='lg:hidden w-7 pt-5 md:pt-0 ml-12 md:ml-28'>
-                  {/* <SendIcon /> */}
                 </div>
                 Contato
               </Link>
