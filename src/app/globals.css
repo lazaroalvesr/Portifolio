@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.hamburguer {
+  border-top: 3px solid gray;
+  display: block;
+  width: 25px;
+  position: relative;
+  transition: 0.3s ease-in;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hamburguer::after,
+.hamburguer::before {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: gray;
+
+  display: block;
+  margin-top: 6px;
+  transition: 0.3s ease-in;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hamburguer.ativo {
+  transform: rotate(90deg);
+  border-top-color: transparent;
+}
+
+.hamburguer.ativo::after {
+  transform: rotate(135deg);
+  margin-top: -3px;
+}
+
+.hamburguer.ativo::before {
+  transform: rotate(-135deg);
+}
+
+#items {
+  transform: translateX(-1000);
+  opacity: 0;
 }
