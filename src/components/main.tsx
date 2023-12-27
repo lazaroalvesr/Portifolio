@@ -61,7 +61,7 @@ export function Main() {
             </div>
           </div>
         </div>
-        <div className="lg:ml-40 ml-20 w-64 lg:w-[300px] mt-4">
+        <div className="lg:ml-40 ml-16 w-64 lg:w-[300px] mt-4">
           <Image
             src="/img/code.svg"
             alt="Pessoa sentada em uma cadeira mexendo em um Computador"

@@ -42,7 +42,7 @@ export function Sobre() {
             <p className="dark:text-gray-50 text-gray-900">Minha Introdução</p>
           </div>
           <div className="lg:flex lg:flex-row flex-col mt-12 mb-32">
-            <div className="ml-20 w-64 lg:w-[300px] lg:ml-0 mb-6 lg:mr-20 mr-0 lg:mb-0">
+            <div className="ml-16 w-64 lg:w-[300px] lg:ml-0 mb-6 lg:mr-20 mr-0 lg:mb-0">
               <Image
                 src="/img/code.svg"
                 alt="Pessoa sentada em uma cadeira mexendo em um Computador"

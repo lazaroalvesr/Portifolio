@@ -5,7 +5,7 @@ import { FaMoon } from 'react-icons/fa';
 import { IoSunnySharp } from "react-icons/io5";
 
 export function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
     const theme = localStorage.getItem('theme')
