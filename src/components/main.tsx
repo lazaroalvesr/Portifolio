@@ -34,7 +34,7 @@ export function Main() {
             <span className="bg-gray-500 w-14 h-0.5 mt-3 absolute top-14"></span>
             <p className="lg:ml-16 ml-16 mt-4 dark:text-gray-50 text-gray-900">Desenvolvedor Front-End</p>
             <div className="absolute top-[360px] lg:relative lg:top-0">
-              <p className="mt-4 mb-6 text-xl lg:w-80 w-[350px]  dark:text-gray-50 text-gray-900">Sou um Desenvolvedor Front-End em busca de
+              <p className="mt-4 mb-6 text-xl lg:w-80 w-[320px]  dark:text-gray-50 text-gray-900">Sou um Desenvolvedor Front-End em busca de
                 desafios e soluções criativas para enriquecer
                 a experiência do usuário.</p>
               <span className="text-gray-600">PCD: CID: (M41.4),(G82.0)</span>
