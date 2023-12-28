@@ -23,7 +23,7 @@ export default function Formacao() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#form",
-        start: 'top 400px',
+        start: 'top 600px',
         end: 'bottom 600px',
         scrub: true
       }

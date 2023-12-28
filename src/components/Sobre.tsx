@@ -35,13 +35,13 @@ export function Sobre() {
       id="Sobre">
       <div
         id="items"
-        className="max-w-5xl lg:mt-32 mt-80 m-auto">
-        <div className="">
+        className="max-w-5xl lg:mt-32 md:mt-44 mt-80 m-auto">
+        <div>
           <div className="text-center items-center">
             <h1 className="text-3xl dark:text-gray-50 text-gray-900">Sobre</h1>
             <p className="dark:text-gray-50 text-gray-900">Minha Introdução</p>
           </div>
-          <div className="lg:flex lg:flex-row flex-col mt-12 mb-32">
+          <div className="flex lg:flex-row flex-col md:flex-row mt-12 mb-32">
             <div className="ml-16 w-64 lg:w-[300px] lg:ml-0 mb-6 lg:mr-20 mr-0 lg:mb-0">
               <Image
                 src="/img/code.svg"
@@ -50,7 +50,7 @@ export function Sobre() {
                 height={12}
               />
             </div>
-            <div className="lg:ml-20 ml-4 flex flex-col">
+            <div className="lg:ml-20 md:ml-16 ml-4 flex flex-col">
               <div className="flex gap-2">
                 <div className="lg:w-28 w-[112px] border-gray-500 flex  items-center justify-center border-2 h-24 rounded-md">
                   <RiReactjsLine className="text-blue-500" size="42px" />

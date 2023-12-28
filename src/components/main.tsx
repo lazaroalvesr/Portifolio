@@ -7,23 +7,23 @@ import { FaXTwitter } from "react-icons/fa6";
 export function Main() {
   return (
     <div className=" max-w-5xl m-auto ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-44 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mt-12 lg:mt-44 md:mt-20 relative">
         <div className="flex ">
           <div className="lg:mt-14">
-            <ul className="lg:flex-col lg:right-0 lg:top-0 flex flex-row gap-4 absolute lg:relative right-32 top-[560px]">
+            <ul className="lg:flex-col lg:right-0 lg:top-0 flex flex-row gap-4 md:left-12 md:top-80 absolute lg:relative right-32 top-[560px]">
               <li className="mb-4">
-                <Link href="/">
+                <Link href="https://github.com/lazaroalvesr" target="_blank">
                   <FaGithub className=" dark:text-gray-50" size="42px" />
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href="/">
+                <Link href="https://www.linkedin.com/in/l%C3%A1zaro-alves-r/" target="_blank">
                   <FaLinkedin className="text-blue-500" size="42px" />
 
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="https://twitter.com/" target="_blank">
                   <FaXTwitter className="dark:text-gray-50" size="42px" />
                 </Link>
               </li>
@@ -33,7 +33,7 @@ export function Main() {
             <h1 className="text-4xl dark:text-gray-50 lg:ml-0 ml-7 text-gray-900">Lázaro Alves R</h1>
             <span className="bg-gray-500 w-14 h-0.5 mt-3 absolute top-14"></span>
             <p className="lg:ml-16 ml-16 mt-4 dark:text-gray-50 text-gray-900">Desenvolvedor Front-End</p>
-            <div className="absolute top-[360px] lg:relative lg:top-0">
+            <div className="absolute top-[360px] md:top-20 lg:relative lg:top-0">
               <p className="mt-4 mb-6 text-xl lg:w-80 w-[320px]  dark:text-gray-50 text-gray-900">Sou um Desenvolvedor Front-End em busca de
                 desafios e soluções criativas para enriquecer
                 a experiência do usuário.</p>

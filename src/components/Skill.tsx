@@ -15,7 +15,7 @@ export function Skills() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#hab",
-        start: 'top 400px',
+        start: 'top 700px',
         end: 'bottom 600px',
         scrub: true
       }
@@ -35,7 +35,7 @@ export function Skills() {
           <h1 className="text-3xl dark:text-gray-50 text-gray-900">Skills</h1>
           <p className="dark:text-gray-50 text-gray-900">Minhas Habilidades</p>
         </div>
-        <div className="flex lg:flex-row flex-col justify-center m-auto lg:gap-16 gap-8 mt-12 items-center">
+        <div className="flex lg:flex-row flex-col md:flex-row justify-center m-auto lg:gap-16 gap-8 mt-12 items-center">
           <div className="w-80 border-2 dark:border-gray-600 border-gray-900 rounded-md mb-4 lg:mb-0">
             <div className="flex pt-3 items-center justify-center">
               <h2>Frontend Developer</h2>

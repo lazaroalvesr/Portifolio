@@ -4,7 +4,6 @@ import Formacao from "@/components/Formacao";
 import Portifolio from "@/components/Portifolio";
 import { Skills } from "@/components/Skill";
 import { Sobre } from "@/components/Sobre";
-import { Header } from "@/components/header";
 import { Main } from "@/components/main";
 
 export default function Home() {

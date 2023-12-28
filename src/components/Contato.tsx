@@ -16,7 +16,7 @@ export default function Contato() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#cont",
-        start: 'top 400px',
+        start: 'top 800px',
         end: 'bottom 400px',
         scrub: true
       }
@@ -36,11 +36,11 @@ export default function Contato() {
         className=" flex justify-center  dark:text-gray-200 text-black">
         <div className="max-w-5xl m-auto pt-12 pb-12">
           <div className="text-center items-center">
-            <h1 className="text-3xl dark:text-gray-50 text-gray-900">Contato</h1>
-            <p className="dark:text-gray-50 text-gray-900">Entrar em Contato</p>
+            <h1 className="text-3xl dark:text-gray-50 md:ml-12 lg:ml-0  text-gray-900">Contato</h1>
+            <p className="dark:text-gray-50 md:ml-12 lg:ml-0  text-gray-900">Entrar em Contato</p>
           </div>
           <div className="text-center py-6">
-            <p className="text-xl font-semibold">Fale Comigo</p>
+            <p className="text-xl font-semibold md:ml-12 lg:ml-0 ">Fale Comigo</p>
           </div>
           <div className="w-72 lg:w-96 h-64 dark:text-black md:ml-14
              bg-gray-100  rounded-xl border-gray-300 border-2 lg:mr-12 ">

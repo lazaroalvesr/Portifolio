@@ -13,7 +13,7 @@ export function Header() {
 
   return (
     <div className={` max-w-full } `}>
-      <header className='bg-gray-300 dark:bg-gray-900 w-fulll text-gray-900 fixed -bottom-[80px] lg:bottom-[680px] md:top-[1100px] lg:-top-1 left-0 right-0 z-50 flex 
+      <header className='bg-gray-300 dark:bg-gray-900 w-fulll text-gray-900 fixed -bottom-[80px] lg:bottom-[680px] md:top[1100px] lg:-top-1 left-0 right-0 z-50 flex 
       justify-between max-w-5xl m-auto h-44 lg:h-32 items-center pt-2 '>
         <h1 className="text-2xl italic pl-4 text-gray-900 -mt-20 lg:-mt-0  lg:pt-12 dark:text-gray-50">Alves R</h1>
         <nav className='flex lg:pt-12'>
