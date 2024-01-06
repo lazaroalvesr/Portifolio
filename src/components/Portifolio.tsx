@@ -39,7 +39,7 @@ export default function Portifolio() {
             <div className="w-80 h-80  rounded-xl bg-gray-200 dark:bg-gray-300 md:mb-0 lg:mb-0 mb-4 ">
               <div className="w-72 h-44 rounded-xl m-auto mt-3">
                 <Image
-                  src={"/img/crud.png"}
+                  src={"/img/Finvue.png"}
                   alt="pao"
                   width={320}
                   height={12}
@@ -47,11 +47,11 @@ export default function Portifolio() {
                 />
               </div>
               <div className="ml-6 mt-2 text-black">
-                <p>Todo List</p>
-                <p className="text-gray-400 pt-1">ReactJS, TypeScript, Tailwind, Axios, VercelPostgres</p>
+                <p>Finvue Gerenciador Finaceiro</p>
+                <p className="text-gray-400 pt-1">ReactJS, TypeScript, TailwindCss, Axios, VercelPostgres, prisma</p>
               </div>
               <div className="mt-2 ml-6 ">
-                <Link href="https://front-crud-postgree-vercel.vercel.app/" target="_blank">
+                <Link href="https://finvue-layout.vercel.app/" target="_blank">
                   <button className="flex">
                     <p className="text-gray-500">Ver</p>
                     <div className="w-5 ml-2 pt-1">
@@ -96,36 +96,7 @@ export default function Portifolio() {
                 </Link>
               </div>
             </div>
-            <div className="w-80 h-80  rounded-xl bg-gray-200 dark:bg-gray-300 md:mb-0 lg:mb-0 mb-4 ">
-              <div className="w-72 h-44 rounded-xl m-auto mt-3">
-                <Image
-                  src={"/img/LandPage_Busnes.png"}
-                  alt="pao"
-                  width={320}
-                  height={12}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="ml-6 text-black">
-                <p>LangPage BiznesZone</p>
-                <p className="text-gray-400 pt-1">ReactJS, TypeScript, Tailwind, NextJS</p>
-              </div>
-              <div className="mt-7 ml-6">
-                <Link href="https://business-opal.vercel.app/" target="_blank">
-                  <button className="flex">
-                    <p className="text-gray-500">Ver</p>
-                    <div className="w-5 ml-2 pt-1">
-                      <Image
-                        src="/img/arrow-right.png"
-                        alt="seta"
-                        width={23}
-                        height={12}
-                      />
-                    </div>
-                  </button>
-                </Link>
-              </div>
-            </div>
+    
           </div>
         </div>
       </div>
