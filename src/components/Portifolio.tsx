@@ -14,9 +14,9 @@ export default function Portifolio() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#Porti",
-        start: 'top 400px',
+        start: 'top 700px',
         end: 'bottom 400px',
-        scrub: true
+        scrub: true,
       }
     })
 
