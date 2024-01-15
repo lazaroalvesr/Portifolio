@@ -48,7 +48,7 @@ export default function Portifolio() {
               </div>
               <div className="ml-6 mt-2 text-black">
                 <p>Finvue Gerenciador Finaceiro</p>
-                <p className="text-gray-400 pt-1">ReactJS, TypeScript, TailwindCss, Axios, VercelPostgres, prisma</p>
+                <p className="text-gray-400 pt-1">ReactJS, TypeScript, Tailwind CSS, Axios, VercelPostgress, Prisma, NodeJs, Fastify</p>
               </div>
               <div className="mt-2 ml-6 ">
                 <Link href="https://finvue-layout.vercel.app/" target="_blank">
