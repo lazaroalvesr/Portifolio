@@ -51,7 +51,7 @@ export default function Portifolio() {
                 <p className="text-gray-400 pt-1">ReactJS, TypeScript, Tailwind CSS, Axios, VercelPostgress, Prisma, NodeJs, Fastify</p>
               </div>
               <div className="mt-2 ml-6 ">
-                <Link href="https://finvue-layout.vercel.app/" target="_blank">
+                <Link href="https://finvue-nine.vercel.app/" target="_blank">
                   <button className="flex">
                     <p className="text-gray-500">Ver</p>
                     <div className="w-5 ml-2 pt-1">
