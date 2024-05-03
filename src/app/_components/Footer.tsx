@@ -19,7 +19,7 @@ export const Footer = () => {
     return (
         <BGFooter>
             <FooterContainer>
-                <NameFooter>© {anoCriacao} Alves R. Alguns direitos reservados</NameFooter>
+                <NameFooter>© {anoCriacao} Alves R. Alguns direitos reservados.</NameFooter>
             </FooterContainer>
         </BGFooter>
     )

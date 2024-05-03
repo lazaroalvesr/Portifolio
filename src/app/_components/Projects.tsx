@@ -1,6 +1,6 @@
 import { CardProjects } from "./CardProjects"
 import { BgGlobal, Container } from "./_styles/Container.styles"
-import { ContainerProjects, DivCardProjects, DivProjectHover, DivProjectImg, DivProjectName, DivProjectSubName, DivProjects, DivProjectsContainer, ProjectsContainer, ProjectsTitle } from "./_styles/Projects.styles"
+import { ContainerProjects, ProjectsContainer, ProjectsTitle } from "./_styles/Projects.styles"
 
 export const Projects = () => {
     return (
@@ -17,13 +17,12 @@ export const Projects = () => {
                             hoverText="O site foi criado para 
                         mostrar os produtos e serviços da empresa, 
                         como suas bombas de concreto, e facilitar 
-                        o contato com os clientes"
+                        o contato com os clientes."
                             skillsText={
                                 ["ReactJs", "NextJs", "Tailwind CSS", "TypeScript"]
                             }
                             href="https://arrudabombas.com.br/"
                         />
-
                         <CardProjects
                             src="/img/LandPage_API.png"
                             alt="API Gestão de carros"
@@ -31,15 +30,16 @@ export const Projects = () => {
                             subName="API para gestão de loja de carros: criar,
                              editar, visualizar, excluir itens, buscar por ID e 
                              categorizar veículos em categorias pré-definidas"
-                            hoverText="O site foi criado para 
-                        mostrar os produtos e serviços da empresa, 
-                        como suas bombas de concreto, e facilitar 
-                        o contato com os clientes"
+                            hoverText="API completa para gestão de loja de carros. 
+                            Cria, edita, visualiza e exclui registros, busca por ID e 
+                            categoriza veículos. Ideal para comércio eletrônico automotivo
+                             e sistemas de concessionárias.   "
                             skillsText={
                                 ["NodeJS", "Fastify", "Prisma", "PostgreeSQL", "TSX", "TypeScript"]
                             }
                             href="https://github.com/lazaroalvesr/Api_Car"
                         />
+
                     </ContainerProjects>
                 </ProjectsContainer>
             </Container>

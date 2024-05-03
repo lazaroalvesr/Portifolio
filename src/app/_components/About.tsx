@@ -42,7 +42,7 @@ export const About = () => {
                             Trabalho com <WordOnly>HTML</WordOnly> , <WordOnly>CSS</WordOnly>,  <WordOnly>JavaScript</WordOnly>,  <WordOnly>TypeScript</WordOnly> , <WordOnly>ReactJS</WordOnly> ,
                               <WordOnly> Next.js</WordOnly>, <WordOnly>Tailwind CSS</WordOnly> e <WordOnly>Styled-Components</WordOnly>.
                                Tenho habilidades em <WordOnly>Node.js</WordOnly>, <WordOnly>Fastify</WordOnly> , <WordOnly>SQL</WordOnly>  , <WordOnly>PostgreSQL</WordOnly> 
-                            e <WordOnly>Prisma</WordOnly></AboutDescription>
+                            e <WordOnly>Prisma.</WordOnly></AboutDescription>
                             <AboutSubDescription>Com habilidades abrangentes, da concepção à implementação, garanto resultados de 
                                 alta qualidade e impacto positivo nos projetos.</AboutSubDescription>
                         </DivAboutMe>

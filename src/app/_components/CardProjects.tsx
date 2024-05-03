@@ -9,7 +9,7 @@ export const CardProjects = ({ src, alt, name, subName, hoverText, href, skillsT
                 <DivProjectName>{name}</DivProjectName>
                 <DivProjectSubName>{subName}</DivProjectSubName>
                 <DivProjectHover>
-                    <DivHoverTitle>LandPage - Arruda Bombas</DivHoverTitle>
+                    <DivHoverTitle>{name}</DivHoverTitle>
                     <DivHoverDescription>{hoverText}</DivHoverDescription>
                     <HoverContainer>
                         <DivHoverSkills>

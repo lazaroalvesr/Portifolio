@@ -9,7 +9,7 @@ export const Contact = () => {
                     <ContactTitle>Contato</ContactTitle>
                     <ContactSubTitle>Estou aqui para transformar suas ideias em realidade.
                         Vamos iniciar essa jornada juntos. Entre em contato e vamos conversar
-                        sobre seu projeto</ContactSubTitle>
+                        sobre seu projeto.</ContactSubTitle>
                     <ContactItens>
                         <ContactLink href="https://github.com/lazaroalvesr">
                             <DivIcons>

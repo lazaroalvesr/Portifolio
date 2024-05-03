@@ -6,14 +6,15 @@ export const ContactContainer = styled.section`
     padding-top: 120px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-bottom: 80px;
     @media (min-width: 320px) and (max-width: 480px) {
         padding-top: 70px;
+        align-items: center;
 
         }
     @media (min-width: 768px) and (max-width: 1024px) {
             padding-top: 80px;
+            align-items: center;
 
 }
 `
