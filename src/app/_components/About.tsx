@@ -1,4 +1,3 @@
-
 import { AboutH1, ContainerAbout, DivAbouInfos, DivAbout, DivImg, ImgAbout, InfoName, DivImgs, ImgIcons, DivAboutMe, ParagraphAboutMe, AboutDescription, WordOnly, AboutSubDescription, AboutBg } from "./_styles/About.styles"
 import { Container } from "./_styles/Container.styles"
 import { LinkRedirect } from "@/lib/LinkRedirect"
@@ -6,7 +5,7 @@ import { LinkRedirect } from "@/lib/LinkRedirect"
 export const About = () => {
     return (
         <AboutBg>
-            <Container>
+            <Container  id="about">
                 <ContainerAbout>
                     <AboutH1>SObre</AboutH1>
                     <DivAbout>

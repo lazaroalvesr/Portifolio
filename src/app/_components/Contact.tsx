@@ -4,7 +4,7 @@ import { BgGlobal, Container } from "./_styles/Container.styles"
 export const Contact = () => {
     return (
         <BgGlobal>
-            <Container>
+            <Container id="Contact">
                 <ContactContainer>
                     <ContactTitle>Contato</ContactTitle>
                     <ContactSubTitle>Estou aqui para transformar suas ideias em realidade.
@@ -13,23 +13,22 @@ export const Contact = () => {
                     <ContactItens>
                         <ContactLink href="https://github.com/lazaroalvesr">
                             <DivIcons>
-                                <ContactIcons src="/img/Icons/Icone_GittHub.png" />
+                                <ContactIcons src="/img/Icons/Icone_GittHub.png" alt="Icone GitHUb" />
                                 <IconsText>https://github.com/lazaroalvesr</IconsText>
                             </DivIcons>
                         </ContactLink>
                         <ContactLink href="e">
                             <DivIcons>
-                                <ContactIcons src="/img/Icons/Icone_Email.png" />
+                                <ContactIcons src="/img/Icons/Icone_Email.png" alt="Icone Email"/>
                                 <IconsText>lazaroalves12355@gmail.com</IconsText>
                             </DivIcons>
                         </ContactLink>
                         <ContactLink href="e">
                             <DivIcons>
-                                <ContactIcons src="/img/Icons/Icone_Linkedin.png" />
+                                <ContactIcons src="/img/Icons/Icone_Linkedin.png"  alt="Icone Linkedin"/>
                                 <IconsText>https://www.linkedin.com/in/l%C3%A1zaro-alves-r/</IconsText>
                             </DivIcons>
                         </ContactLink>
-
                     </ContactItens>
                 </ContactContainer>
             </Container>

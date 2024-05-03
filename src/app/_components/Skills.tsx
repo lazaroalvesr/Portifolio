@@ -16,16 +16,16 @@ import { useEffect, useState } from "react";
 
 const imgs = [
     { src: "/img/Icons/Icone_HTML.png", alt: "HTML", name: "HTML" },
-    { src: "/img/Icons/Icone_Css.png", alt: "de1", name: "CSS" },
-    { src: "/img/Icons/Icone_Tailwind_CSS.png", alt: "de1", name: "Tailwind CSS" },
-    { src: "/img/Icons/Icone_Styled_Components.png", alt: "de1", name: "Styled Components" },
-    { src: "/img/Icons/Icone_JavaScript.png", alt: "de1", name: "JavaScript" },
-    { src: "/img/Icons/Icone_Typescript.png", alt: "de1", name: "TypeScript" },
-    { src: "/img/Icons/Icone_ReactJS.png", alt: "de1", name: "ReactJS" },
-    { src: "/img/Icons/Icone_Node.png", alt: "de1", name: "Node.js" },
-    { src: "/img/Icons/Icone_Fastify.png", alt: "de1", name: "Fastify" },
-    { src: "/img/Icons/Icone_PostgresQL.png", alt: "de1", name: "PostgreSQL" },
-    { src: "/img/Icons/Icone_Prisma_ORM.png", alt: "de1", name: "Prisma ORM" },
+    { src: "/img/Icons/Icone_Css.png", alt: "CSS", name: "CSS" },
+    { src: "/img/Icons/Icone_Tailwind_CSS.png", alt: "Tailwind CSS", name: "Tailwind CSS" },
+    { src: "/img/Icons/Icone_Styled_Components.png", alt: "Styled Components", name: "Styled Components" },
+    { src: "/img/Icons/Icone_JavaScript.png", alt: "JavaScript", name: "JavaScript" },
+    { src: "/img/Icons/Icone_Typescript.png", alt: "TypeScript", name: "TypeScript" },
+    { src: "/img/Icons/Icone_ReactJS.png", alt: "ReactJS", name: "ReactJS" },
+    { src: "/img/Icons/Icone_Node.png", alt: "Node.js", name: "Node.js" },
+    { src: "/img/Icons/Icone_Fastify.png", alt: "Fastify", name: "Fastify" },
+    { src: "/img/Icons/Icone_PostgresQL.png", alt: "PostgreSQL", name: "PostgreSQL" },
+    { src: "/img/Icons/Icone_Prisma_ORM.png", alt: "Prisma ORM", name: "Prisma ORM" },
 ];
 
 export const Skills = () => {
@@ -50,7 +50,7 @@ export const Skills = () => {
 
     return (
         <BgGlobal>
-            <Container>
+            <Container id="Skills">
                 <ContainerSkills>
                     <SkillSTitle>Skills</SkillSTitle>
                 </ContainerSkills>

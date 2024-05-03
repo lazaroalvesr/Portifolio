@@ -71,3 +71,9 @@ export const ButtonMenuMobile = styled.button`
            padding-right: 12px;
     }
  `
+
+ export const LinkHeader = styled.a`
+    display: flex;
+    text-decoration: none;
+    color: white
+ `

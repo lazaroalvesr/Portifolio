@@ -5,7 +5,7 @@ import { ContainerProjects, DivCardProjects, DivProjectHover, DivProjectImg, Div
 export const Projects = () => {
     return (
         <BgGlobal>
-            <Container>
+            <Container id="Projects">
                 <ProjectsContainer>
                     <ProjectsTitle>Projetos</ProjectsTitle>
                     <ContainerProjects>
