@@ -33,12 +33,31 @@ export const Projects = () => {
                             hoverText="API completa para gestão de loja de carros. 
                             Cria, edita, visualiza e exclui registros, busca por ID e 
                             categoriza veículos. Ideal para comércio eletrônico automotivo
-                             e sistemas de concessionárias.   "
+                             e sistemas de concessionárias."
                             skillsText={
                                 ["NodeJS", "Fastify", "Prisma", "PostgreeSQL", "TSX", "TypeScript"]
                             }
                             href="https://github.com/lazaroalvesr/Api_Car"
                         />
+
+                        <CardProjects
+                            src="/img/LandPage_GYM.png"
+                            alt="API Gestão de carros"
+                            name="API -  Gestão de loja de carros"
+                            subName="Nosso site foi desenvolvido para apresentar os
+                            produtos e serviços que oferecemos, assim como as características 
+                            exclusivas que tornam a nossa academia especial.
+                            "
+                            hoverText="API completa para gestão de loja de carros. 
+                            Cria, edita, visualiza e exclui registros, busca por ID e 
+                            categoriza veículos. Ideal para comércio eletrônico automotivo
+                             e sistemas de concessionárias.   "
+                             skillsText={
+                                ["ReactJs", "NextJs", "Styled-Components", "TypeScript"]
+                            }
+                            href="https://land-page-gym.vercel.app/"
+                        />
+
 
                     </ContainerProjects>
                 </ProjectsContainer>
