@@ -163,6 +163,7 @@ export const DivHoverSkills = styled.div`
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-color: red;
 `
 
 
@@ -171,7 +172,7 @@ export const DivHoverSkillsText = styled.p`
   text-align: center;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;
   padding: 6px;
