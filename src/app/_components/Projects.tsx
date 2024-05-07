@@ -11,8 +11,8 @@ export const Projects = () => {
                     <ContainerProjects>
                         <CardProjects
                             src="/img/LandPage_Arruda_Bombas.png"
-                            alt="LandPage Arruda Bombas"
-                            name="LandPage - Arruda Bombas"
+                            alt="Arruda Bombas"
+                            name="Arruda Bombas"
                             subName="Um site para apresentação de nossos produtos e serviços para o setor de Construção Civil"
                             hoverText="O site foi criado para 
                         mostrar os produtos e serviços da empresa, 
@@ -42,18 +42,16 @@ export const Projects = () => {
 
                         <CardProjects
                             src="/img/LandPage_GYM.png"
-                            alt="API Gestão de carros"
-                            name="API -  Gestão de loja de carros"
+                            alt="BestGym"
+                            name="BestGym"
                             subName="Nosso site foi desenvolvido para apresentar os
-                            produtos e serviços que oferecemos, assim como as características 
-                            exclusivas que tornam a nossa academia especial.
+                            produtos e serviços que oferecemos..
                             "
-                            hoverText="API completa para gestão de loja de carros. 
-                            Cria, edita, visualiza e exclui registros, busca por ID e 
-                            categoriza veículos. Ideal para comércio eletrônico automotivo
-                             e sistemas de concessionárias.   "
+                            hoverText="Nosso site foi desenvolvido para apresentar os
+                            produtos e serviços que oferecemos, assim como as características 
+                            exclusivas que tornam a nossa academia especial "
                              skillsText={
-                                ["ReactJs", "NextJs", "Styled-Components", "TypeScript"]
+                                ["ReactJs", "NextJs", "TypeScript" , "Styled-Components"]
                             }
                             href="https://land-page-gym.vercel.app/"
                         />
