@@ -131,8 +131,9 @@ export const DivProjectHover = styled.div`
   padding: 25px;
   width: 100%;
   top: 0;
+  max-width: fit-content;
   height: 100%;
-  flex-direction:column;
+  flex-direction: column;
   border-radius: 12px;
   transition: transform 0.3s ease; 
   color: white;
@@ -155,17 +156,16 @@ export const DivHoverDescription = styled.h3`
 export const HoverContainer = styled.div`
   width: 100%;
   display: flex;
-`
+  max-width: 300px;
+`;
 
 export const DivHoverSkills = styled.div`
   padding-top: 20px;
   gap: 10px;
   height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: red;
-`
-
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 export const DivHoverSkillsText = styled.p`
   color:#27a5ac ;
