@@ -171,6 +171,7 @@ export const DivHoverSkillsText = styled.p`
   text-align: center;
   display: flex;
   align-items: center;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 6px;

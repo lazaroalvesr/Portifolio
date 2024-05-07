@@ -50,8 +50,8 @@ export const Projects = () => {
                             hoverText="Nosso site foi desenvolvido para apresentar os
                             produtos e serviços que oferecemos, assim como as características 
                             exclusivas que tornam a nossa academia especial "
-                             skillsText={
-                                ["ReactJs", "NextJs", "TypeScript" , "Styled-Components"]
+                            skillsText={
+                                ["ReactJs", "NextJs", "TypeScript", "Styled-Components"]
                             }
                             href="https://land-page-gym.vercel.app/"
                         />
