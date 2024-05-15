@@ -68,6 +68,9 @@ export const DivAbouInfos = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: 768px) and (max-width: 1024px) {
+margin: auto;
+}
 `
 
 export const InfoName = styled.h2`
@@ -101,18 +104,17 @@ export const DivImgs = styled.div`
     gap: 20px;
     padding: 15px;
     @media (min-width: 768px) and (max-width: 1024px) {
-    margin-left: 120px;
-    display: flex;
+
     }
    
 `
 export const ImgIcons = styled.img`
    width: 40px;
    height: 40px;
+   transition: transform 0.3s ease; 
 
 &&:hover{
     transform: scale(1.2);
-    transition: transform 0.3s ease; 
 }
 `
 
@@ -134,6 +136,9 @@ export const ParagraphAboutMe = styled.p`
     color: white;
     padding-top: 20px;
     font-size: 20px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+margin-left: 15px;
+}
 `
 
 export const AboutDescription = styled.p`

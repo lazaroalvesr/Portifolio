@@ -191,10 +191,10 @@ export const DivHoverViewProject = styled.a`
   color: white;
   text-align: center;
   cursor: pointer;
+    transition: transform 0.3s ease; 
 
   &&:hover{
     transform: scale(1.1);
-    transition: transform 0.3s ease; 
     background-color: #252f3d;
   }
 `

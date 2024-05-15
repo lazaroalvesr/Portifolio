@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-export const ContainerSkills= styled.div`
+export const ContainerSkills = styled.div`
    padding-top: 120px;
 `
 
@@ -37,35 +37,49 @@ export const SkillSTitle = styled.h1`
     }
 `
 
-export const DivSkills = styled.div`
-  padding-top: 60px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-   @media (min-width: 320px) and (max-width: 480px) {
-              padding-left: 12px;
-        }
+export const SkillsCardContainer = styled.div`
+ display: flex;
+width: 100%;
+margin: auto;
+margin-top: 52px;
+gap: 30px;
+flex-wrap:wrap;
+align-items: center;
+justify-content: center;
+@media (min-width: 320px) and (max-width: 480px) {
+       width: 100%;
+       gap: 19px;
+    }
 `
 
-export const SkillImg = styled.div`
- font-size: 20px;
- justify-content: center;
- align-items: center;
- text-align: center;
- height: 240px;
- display: flex;
- flex-direction: column;
- 
- `
+export const SkillsCards = styled.div`
+  width: 194px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  border: 2px solid #848282;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
 
-export const SkillsName = styled.p`
-    display: none;
-    padding-top: 12px;
-  ${SkillImg}:hover & {
-    display: flex;
-    color: #fff;
-    transform: scale(1.2);
-    transition: transform 0.3s ease; 
+&&:hover{
+  transform: scale(1.1);
+}
+@media (min-width: 320px) and (max-width: 480px) {
+        width: 180px;
+    }
+`
 
- }
+
+export const SkilsImg = styled.img`
+  width: 80px;
+  height: 80px;
+`
+
+export const SkillsName = styled.h2`
+  font-size: 20px;
+  color: #fff;
 `

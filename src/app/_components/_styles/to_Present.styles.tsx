@@ -29,14 +29,6 @@ export const DivInfos = styled.div`
 }
 `
 
-export const ParagraphInfo = styled.p`
-    color: #79b6c9;
-    font-size: 30px;
-    align-items: start;
-    @media (min-width: 320px) and (max-width: 480px) {
-           font-size: 20px;
-    }
- `
 
 export const TitleInfo = styled.p`
     color: white;
@@ -45,12 +37,27 @@ export const TitleInfo = styled.p`
     padding-top: 12px;
     width: 100%;
     @media (min-width: 320px) and (max-width: 480px) {
-           padding-left: 30px;
+        width: 340px;
+        padding-bottom: 10px;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
         font-size: 70px;
+        width: 340px;
+        padding-bottom: 10px;
 }
+
 `
+
+export const ParagraphInfo = styled.p`
+    color: #79b6c9;
+    font-size: 30px;
+    align-items: start;
+    @media (min-width: 320px) and (max-width: 480px) {
+           font-size: 20px;
+           margin-left: -50px;
+    }
+ `
+
 
 export const PresentDiv = styled.div`
        display: flex;
@@ -75,9 +82,10 @@ export const ViewAllProjects = styled.div`
     gap: 8px;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.3s ease; 
+
     &&:hover{
         transform: scale(1.1);
-        transition: transform 0.3s ease; 
     }
 `
 
@@ -116,9 +124,10 @@ export const DowloadCurriculum = styled.button`
     border-radius: 6px;
     margin-top: 26px;
     cursor: pointer;
+    transition: transform 0.3s ease; 
+
     &&:hover{
         transform: scale(1.1);
-        transition: transform 0.3s ease; 
     }
     @media (min-width: 320px) and (max-width: 480px) {
         width: 170px;
