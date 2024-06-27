@@ -14,7 +14,7 @@ export const Contact = () => {
                         <ContactLink href="https://github.com/lazaroalvesr" target="_blank">
                             <DivIcons>
                                 <ContactIcons src="/img/Icons/Icone_GittHub.png" alt="Icone GitHUb" />
-                                <IconsText>https://github.com/lazaroalvesr</IconsText>
+                                <IconsText>github.com/lazaroalvesr</IconsText>
                             </DivIcons>
                         </ContactLink>
                         <ContactLink href="/">
@@ -26,7 +26,7 @@ export const Contact = () => {
                         <ContactLink href="https://www.linkedin.com/in/l%C3%A1zaro-alves-r/" target="_blank">
                             <DivIcons>
                                 <ContactIcons src="/img/Icons/Icone_Linkedin.png"  alt="Icone Linkedin"/>
-                                <IconsText>https://www.linkedin.com/in/l%C3%A1zaro-alves-r/</IconsText>
+                                <IconsText>Lázaro Alves R</IconsText>
                             </DivIcons>
                         </ContactLink>
                     </ContactItens>

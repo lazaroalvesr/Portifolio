@@ -14,24 +14,6 @@ export const Header = () => {
         setAtivo((!ativo))
     }
 
-    const handleResize = () => {
-        if (window.innerWidth < 768 && !ativo) {
-            setAtivo(true)
-        }
-
-        if (window.innerWidth < 426 && ativo) {
-            setAtivo(false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize)
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [ativo])
-
     return (
         <BgGlobal>
             <Container>
@@ -40,22 +22,20 @@ export const Header = () => {
                     <ButtonMenuMobile onClick={toggle} aria-label="Menu Mobile">
                         {ativo ? < IoMdClose size={30} color="white" /> : <CiMenuFries size={30} color="white" />}
                     </ButtonMenuMobile>
-                    {ativo || (typeof window !== 'undefined' && window.innerWidth >= 768) ? (
-                        <HeaderUl>
-                            <LinkHeader href="#about">
-                                <HeaderLi>Sobre</HeaderLi>
-                            </LinkHeader>
-                            <LinkHeader href="#Skills">
-                                <HeaderLi>Habilidades</HeaderLi>
-                            </LinkHeader>
-                            <LinkHeader href="#Projects">
-                                <HeaderLi>Projetos</HeaderLi>
-                            </LinkHeader>
-                            <LinkHeader href="#Contact">
-                                <HeaderLi>Contato</HeaderLi>
-                            </LinkHeader>
-                        </HeaderUl>
-                    ) : null}
+                    <HeaderUl ativo={ativo}>
+                        <LinkHeader href="#about">
+                            <HeaderLi>Sobre</HeaderLi>
+                        </LinkHeader>
+                        <LinkHeader href="#Skills">
+                            <HeaderLi>Habilidades</HeaderLi>
+                        </LinkHeader>
+                        <LinkHeader href="#Projects">
+                            <HeaderLi>Projetos</HeaderLi>
+                        </LinkHeader>
+                        <LinkHeader href="#Contact">
+                            <HeaderLi>Contato</HeaderLi>
+                        </LinkHeader>
+                    </HeaderUl>
                 </HeaderContainer >
             </Container>
 

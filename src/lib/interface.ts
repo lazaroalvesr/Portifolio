@@ -38,3 +38,8 @@ export const skillsData = [
     { src: '/img/Icons/Icone_PostgresQL.png', alt: 'Icone PostgresQL', text: 'PostgreSQL' },
     { src: '/img/Icons/Icone_Prisma_ORM.png', alt: 'Icone Prisma ORM', text: 'Prisma ORM' },
 ];
+
+
+export interface HeaderMobile {
+    ativo?: boolean
+}

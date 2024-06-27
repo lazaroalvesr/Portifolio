@@ -1,5 +1,6 @@
 'use client'
 
+import { HeaderMobile } from "@/lib/interface";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -28,10 +29,11 @@ export const HeaderTitle = styled.h1`
 
  `
 
-export const HeaderUl = styled.ul`
+export const HeaderUl = styled.ul<HeaderMobile>`
     display: flex;
     align-items: center;
     @media (min-width: 320px) and (max-width: 480px) {
+        display: ${({ ativo }) => ativo ? 'flex' : 'none'};
         position: absolute; 
         width: 100%;
         flex-direction: column;
@@ -72,7 +74,7 @@ export const ButtonMenuMobile = styled.button`
     }
  `
 
- export const LinkHeader = styled.a`
+export const LinkHeader = styled.a`
     display: flex;
     text-decoration: none;
     color: white

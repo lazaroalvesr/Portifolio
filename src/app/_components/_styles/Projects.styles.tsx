@@ -82,9 +82,10 @@ export const DivProjects = styled.div`
     border-radius: 12px;
     background-color: #393e46;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+    
         &&:hover{
     transform: scale(1.1);
-    transition: transform 0.3s ease; 
    }
    &&::after{
     content: '';

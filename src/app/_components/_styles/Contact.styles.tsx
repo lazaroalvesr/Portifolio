@@ -80,7 +80,7 @@ export const ContactItens = styled.div`
 
 `
 
-export const DivIcons = styled.p`
+export const DivIcons = styled.div`
    display: flex;
    align-items: center;
    @media (min-width: 320px) and (max-width: 480px) {
@@ -121,10 +121,10 @@ export const ContactIcons = styled.img`
 export const ContactLink = styled.a`
     display: flex;
     text-decoration: none;
+    transition: transform 0.3s ease; 
 
     &&:hover{
         transform: scale(1.1);
-        transition: transform 0.3s ease; 
 
     }
 `
