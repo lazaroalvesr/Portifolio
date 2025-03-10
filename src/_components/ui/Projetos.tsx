@@ -25,7 +25,7 @@ export const Projetos = () => {
                         src="/img/LandPage_GYM.png"
                         titulo="BestGym"
                         sobre="BestGym foi desenvolvido para apresentar os produtos e serviços que oferecemos, assim como as características exclusivas que tornam a nossa academia especial"
-                        tec={["Typescript", "NextJS", "Styled-Components"]}
+                        tec={["Typescript", "NextJS", "Styled-Components","ReactJS"]}
                     />
                     <CardProjetos
                         hrefGit="https://github.com/lazaroalvesr/Arruda_Bombas"
@@ -33,23 +33,23 @@ export const Projetos = () => {
                         src="/img/arruda-bombas.png"
                         titulo="Arruda Bombas Hidráulicas"
                         sobre="O site da Arruda Bombas Hidráulicas exibe produtos e serviços da empresa, como bombas de concreto, e facilita o contato com os clientes. O design é otimizado para navegação intuitiva e acessível."
-                        tec={["Typescript", "NextJS", "Tailwind CSS"]}
+                        tec={["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]}
                     />
                     <CardProjetos
                         hrefGit="https://github.com/lazaroalvesr/raffleflow-frontend"
-                        href="https://raffle-master-front.vercel.app/"
+                        href="https://github.com/lazaroalvesr/raffleflow-frontend"
                         src="/img/RifaFlow.png"
                         titulo="RifaFlow"
                         sobre="Desenvolvido com Next.js e Tailwind CSS no front-end e NestJS com Prisma e Docker no back-end, o Rifaflow é uma plataforma para criação e gerenciamento de rifas online, com foco em funcionalidade e segurança."
-                        tec={["Typescript", "NextJS", "Tailwind CSS", "NodeJs", "PostgreSQL"]}
+                        tec={["Typescript", "NextJS", "Tailwind CSS", "NodeJs", "PostgreSQL", "ReactJS"]}
                     />
                     <CardProjetos
-                        hrefGit="https://github.com/lazaroalvesr/LandPage_DrKarolina"
-                        href="https://land-page-dr-karolina.vercel.app/"
-                        src="/img/DrKarolina.png"
+                        hrefGit="https://github.com/lazaroalvesr/meuadvogadoonline-"
+                        href="https://meuadvogadoonline.vercel.app/"
+                        src="/img/meu_advogado_online.png"
                         titulo="Dr Karolina"
-                        sobre="Criei uma landing page responsiva para uma advogada, evidenciando seus serviços jurídicos. O design é elegante, profissional e focado em conversão."
-                        tec={["Typescript", "NextJS", "Styled-Components"]}
+                        sobre="Uma plataforma moderna para advogados oferecerem suporte jurídico de forma prática e acessível. Com um sistema intuitivo e integração com WhatsApp, facilita a comunicação entre profissionais e clientes."
+                        tec={["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]}
                     />
                 </div>
             </div>
