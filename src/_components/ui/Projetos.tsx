@@ -71,7 +71,7 @@ export const Projetos = () => {
                 <div className="grid z-40 grid-cols-1 md:grid-cols-2 lg:ml-10 mt-12 m-auto lg:m-0 lg:grid-cols-3 lg:w-96 gap-x-8 lg:gap-x-96 gap-y-8 lg:mt-12 ">
                     {projects.map((item, index) => (
                         <motion.div
-                            key={index}
+                            key={item.hrefGit}
                             initial={{ opacity: 0, y: 50 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.2 }}>
