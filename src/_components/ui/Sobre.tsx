@@ -2,12 +2,25 @@
 
 import Image from "next/image"
 import { ItensListaTec } from "./ItensListaTec"
+import { motion } from 'framer-motion'
+import { useInView } from "react-intersection-observer"
 
 export const Sobre = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2
+    })
+
     return (
-        <section className="mt-32 lg:max-w-7xl  pl-4 m-auto" id="home">
+        <section
+            ref={ref}
+            className="mt-32 lg:max-w-7xl  pl-4 m-auto">
             <div className="flex lg:flex-row flex-col md:flex-row" id="sobre">
-                <div className="flex flex-col">
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    className="flex flex-col">
                     <h1 className="lg:text-3xl text-2xl flex gap-4 font-bold">
                         <Image
                             src="/icon/send.svg"
@@ -48,8 +61,12 @@ export const Sobre = () => {
                             <ItensListaTec text="NestJS " />
                         </div>
                     </div>
-                </div>
-                <div className="border border-blue-500 rounded-full m-auto p-2 lg:ml-32 w-72 mt-[20px] md:mt-32 lg:mt-20 md:mr-4">
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    className="border border-blue-500 rounded-full m-auto p-2 lg:ml-32 w-72 mt-[20px] md:mt-32 lg:mt-20 md:mr-4">
                     <Image
                         src="/img/foto.jpg"
                         alt="Foto"
@@ -57,8 +74,8 @@ export const Sobre = () => {
                         height={90}
                         className="w-72 rounded-full"
                     />
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </section >
     )
 }

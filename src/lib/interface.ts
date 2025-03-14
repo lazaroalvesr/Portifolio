@@ -6,7 +6,11 @@ export interface LinkRedirectProps {
     onClick?: MouseEventHandler<HTMLAnchorElement> | undefined
 }
 
-export interface CardProjetosProps {
+export interface CardProps {
+    items: CardProjetosProps[]
+}
+
+interface CardProjetosProps {
     href: string
     hrefGit: string
     src: string

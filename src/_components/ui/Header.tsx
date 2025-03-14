@@ -44,7 +44,7 @@ export function Header() {
                     />
                     <h1 className="text-2xl font-bold w-8">Alves R</h1>
                 </div>
-                <button className="lg:hidden md:hidden absolute right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
+                <button className="lg:hidden absolute md:hidden right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
                     {ativo ? (
                         <Image src="/icon/x.svg" alt="Ícone fechar menu" width={40} height={40} />
                     ) : (
@@ -52,22 +52,16 @@ export function Header() {
                     )}
                 </button>
                 <nav>
-                    <ul className={`flex gap-12 lg:h-auto md:h-auto items-center ${ativo ? "animeLeftMobile flex-col z-30 text-2xl absolute h-[550px] left-0 -top-4 w-full animateLeft bg-[#101010] items-center justify-center text-center mt-4 " : "h-0 overflow-hidden"}`}>
-                        <li>
-                            <LinkRedirect href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')}>
-                                Sobre
-                            </LinkRedirect>
-                        </li>
-                        <li>
-                            <LinkRedirect href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')}>
-                                Projetos
-                            </LinkRedirect>
-                        </li>
-                        <li>
-                            <LinkRedirect href="#contato" onClick={(e) => scrollToSection(e, '#contato')}>
-                                Contato
-                            </LinkRedirect>
-                        </li>
+                    <ul className={`flex gap-12 lg:h-auto md:h-auto items-center ${ativo ? "animeLeftMobile flex-col z-30 text-2xl absolute h-[550px] left-0 -top-4 w-full animateLeft bg-[#101010] items-center justify-center text-center mt-4" : "h-0 overflow-hidden"}`}>
+                        <LinkRedirect href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')}>
+                            Sobre
+                        </LinkRedirect>
+                        <LinkRedirect href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')}>
+                            Projetos
+                        </LinkRedirect>
+                        <LinkRedirect href="#contato" onClick={(e) => scrollToSection(e, '#contato')}>
+                            Contato
+                        </LinkRedirect>
                         <Link href="/Curriculo.pdf" download="Curriculo.pdf" target="_blank">
                             <Button
                                 className="w-32 h-10 text-lg">
