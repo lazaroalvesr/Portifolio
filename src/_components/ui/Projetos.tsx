@@ -47,7 +47,7 @@ export const Projetos = () => {
                         hrefGit="https://github.com/lazaroalvesr/meuadvogadoonline-"
                         href="https://meuadvogadoonline.vercel.app/"
                         src="/img/meu_advogado_online.png"
-                        titulo="Dr Karolina"
+                        titulo="Dr Adriano D. Signer"
                         sobre="Uma plataforma moderna para advogados oferecerem suporte jurídico de forma prática e acessível. Com um sistema intuitivo e integração com WhatsApp, facilita a comunicação entre profissionais e clientes."
                         tec={["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]}
                     />
