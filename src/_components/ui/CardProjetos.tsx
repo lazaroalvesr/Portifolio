@@ -7,8 +7,8 @@ export const CardProjetos = ({ items }: CardProps) => {
     return (
         <div className="hover:scale-105 transition-transform duration-300">
             {items.map((item, index) => (
-                <div className="w-80 h-[480px] rounded-md -z-20 relative cursor-pointer bg-gray-900 border border-gray-600  ">
-                    <Link key={index} href={item.href} target="_blank" className="cursor-pointer" rel="noopener noreferrer">
+                <div key={index} className="w-80 h-[480px] rounded-md -z-20 relative cursor-pointer bg-gray-900 border border-gray-600  ">
+                    <Link href={item.href} target="_blank" className="cursor-pointer" rel="noopener noreferrer">
                         <div className="w-72 m-auto mt-4">
                             <div className="bg-gray-500 cursor-pointer  rounded-md h-[162px]">
                                 <Image
