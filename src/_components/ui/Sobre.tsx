@@ -32,20 +32,13 @@ export const Sobre = () => {
                         Sobre Mim</h1>
                     <div className="lg:w-[700px] pr-8 lg:pr-0 md:w-[400px] flex flex-col mt-12  ml-10 text-[#979797]">
                         <p className="pb-4">
-                            Desenvolvedor Front-End ReactJS com 2 ano de
-                            experiência. Sou especializado em HTML, CSS,
-                            JavaScript, TypeScript, ReactJS, Next.js,
-                            Tailwind CSS e Styled-Components. Além disso,
-                            possuo habilidades em Node.js, NestJS, SQL,
-                            PostgreSQL e Prisma.
+                            Desenvolvedor Front-End ReactJS com 3 anos de experiência. Especializado em TypeScript, ReactJS,
+                            Next.js, Tailwind CSS e Styled-Components. Também possuo experiência com desenvolvimento back-end
+                            utilizando Node.js, NestJS, SQL, PostgreSQL, Prisma e Docker.
                         </p>
                         <p>
-                            Com um forte conhecimento na concepção e implementação
-                            de soluções, estou comprometido em entregar resultados
-                            de alta qualidade e impactantes para cada projeto.
-                            Minha abordagem é orientada para a inovação e a
-                            excelência, sempre buscando criar experiências
-                            significativas e eficientes.
+                            Foco na criação de interfaces intuitivas e performáticas, sempre explorando novas tecnologias para entregar
+                            soluções modernas e impactantes.
                         </p>
                     </div>
                     <div className="pt-4 ml-10">
