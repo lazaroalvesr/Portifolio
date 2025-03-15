@@ -34,7 +34,7 @@ const projects = [
         hrefGit: "https://github.com/lazaroalvesr/meuadvogadoonline-",
         href: "https://meuadvogadoonline.vercel.app/",
         src: "/img/meu_advogado_online.png",
-        titulo: "Dr Karolina",
+        titulo: "Dr Adriano D. Signer",
         sobre: "A modern platform for lawyers to offer legal support in a practical and accessible way. With an intuitive system and WhatsApp integration, it facilitates communication between professionals and clients.",
         tec: ["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]
     }
