@@ -53,9 +53,9 @@ export function Header() {
                     )}
                 </button>
 
-                <nav className={`flex flex-col lg:flex-row gap-12 items-center absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-[#101010] lg:bg-transparent text-center 
+                <nav className={`flex flex-col lg:flex-row gap-12 items-center lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-[#101010] lg:bg-transparent text-center 
                     transition-all duration-300 ease-in-out 
-                    ${ativo ? "opacity-100 scale-100 h-[450px] absolute -top-12 pt-32" : "opacity-0 h-0 lg:opacity-100 lg:h-auto overflow-hidden"}`}>
+  ${ativo ? "opacity-100 scale-100 h-[450px] absolute -top-12 pt-32" : "opacity-0 h-0 lg:opacity-100 lg:h-auto overflow-hidden"}`}>
 
                     <LinkRedirect href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')}>
                         Sobre
