@@ -20,7 +20,7 @@ export const Sobre = () => {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className="flex flex-col">
+                    className="flex flex-col pl-4 lg:pl-0">
                     <h1 className="lg:text-3xl text-2xl flex gap-4 font-bold">
                         <Image
                             src="/icon/send.svg"
