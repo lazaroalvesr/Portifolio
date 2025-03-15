@@ -49,7 +49,7 @@ export function Header() {
                     <h1 className="text-2xl font-bold w-8">Alves R</h1>
                 </div>
 
-                <button className="lg:hidden absolute right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
+                <button className="lg:hidden absolute md:hidden right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
                     {ativo ? (
                         <Image src="/icon/x.svg" alt="Ícone fechar menu" width={40} height={40} />
                     ) : (
