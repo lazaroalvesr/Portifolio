@@ -45,7 +45,7 @@ export const Sobre = () => {
                         <p className="pr-4 lg:pr-0">Algumas tecnologias que tenho trabalhado <span className="font-bold">recentemente</span>:</p>
                         <div className="grid grid-cols-2 gap-x-4 lg:w-[450px] lg:gap-x-0">
                             <ItensListaTec text="Javascript (ES6++)" />
-                            <ItensListaTec text="React" />
+                            <ItensListaTec text="ReactJs" />
                             <ItensListaTec text="Next.js" />
                             <ItensListaTec text="Typescript" />
                             <ItensListaTec text="Node.js" />
