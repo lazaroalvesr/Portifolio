@@ -27,21 +27,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .animeLeftMobile {
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: animeLeft .3s forwards;
-  }
-}
-
-@keyframes animeLeft {
-  to {
-    opacity: 1;
-    transform: initial;
-  }
-}
-
 ::-webkit-scrollbar {
   width: 8px; 
   height: 8px; 

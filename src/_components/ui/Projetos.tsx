@@ -43,14 +43,14 @@ const projects = [
 export const Projetos = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.2
+        threshold: 0.1
     })
 
 
     return (
         <section
             ref={ref}
-            id="home" className="lg:mt-60 mt-40 md:mt-72 w-full lg:p-0 p-5 max-w-7xl m-auto ">
+            id="home" className="lg:mt-32 mt-[80px] w-full lg:p-0 p-5 max-w-7xl m-auto ">
             <div className="flex flex-col" id="projetos">
                 <div className="flex flex-col">
                     <motion.h1

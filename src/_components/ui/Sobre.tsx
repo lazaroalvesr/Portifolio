@@ -14,7 +14,7 @@ export const Sobre = () => {
     return (
         <section
             ref={ref}
-            className="mt-32 lg:max-w-7xl  pl-4 m-auto">
+            className="lg:mt-32 mt-[80px] lg:max-w-7xl pl-4 m-auto">
             <div className="flex lg:flex-row flex-col md:flex-row" id="sobre">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}

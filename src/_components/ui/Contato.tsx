@@ -7,20 +7,25 @@ import { useInView } from 'react-intersection-observer'
 
 export const Contato = () => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // Only trigger the animation once
-        threshold: 0.2,    // Trigger the animation when 20% of the section is in view
+        triggerOnce: true,
+        threshold: 0.2,
     })
 
     return (
-        <section className="w-full bg-[#101010] text-[#FAFAFA] pt-20" id="contato">
+        <section className="lg:mt-32 mt-[80px] w-full bg-[#101010] text-[#FAFAFA]" id="contato">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto">
                     <div className="space-y-2">
-                        <div className="flex items-center justify-center gap-2 text-blue-500">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
+                            transition={{ duration: 0.8, ease: 'easeOut' }}
+                            className="flex items-center justify-center gap-2 text-blue-500">
                             <ArrowRight className="h-4 w-4" />
-                            <h2 className="text-lg font-medium">Vamos Conversar</h2>
-                        </div>
-                        {/* Animated Heading */}
+                            <h2>
+                                Vamos Conversar
+                            </h2>
+                        </motion.div>
                         <motion.h3
                             ref={ref}
                             initial={{ opacity: 0, y: 50 }}
@@ -32,7 +37,6 @@ export const Contato = () => {
                         </motion.h3>
                     </div>
                 </div>
-                {/* Animated Card */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 50 }}

@@ -33,7 +33,7 @@ export function Header() {
 
     return (
         <header>
-            <div className="lg:max-w-7xl lg:pt-5 p-5 h-auto m-auto items-center md:flex lg:flex lg:justify-between md:justify-between relative z-50">
+            <div className="lg:max-w-7xl lg:pt-5 p-5 h-auto m-auto flex justify-between items-center relative z-50">
                 <div className="flex items-center text-nowrap gap-3">
                     <Image
                         src="/icon/code-dots.svg"
@@ -44,31 +44,33 @@ export function Header() {
                     />
                     <h1 className="text-2xl font-bold w-8">Alves R</h1>
                 </div>
-                <button className="lg:hidden absolute md:hidden right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
+
+                <button className="lg:hidden absolute right-5 top-5 z-50" onClick={toggle} aria-label="Botão de abrir Menu Mobile">
                     {ativo ? (
                         <Image src="/icon/x.svg" alt="Ícone fechar menu" width={40} height={40} />
                     ) : (
                         <Image src="/icon/menu-deep.svg" alt="Ícone abrir menu" width={40} height={40} />
                     )}
                 </button>
-                <nav>
-                    <ul className={`flex gap-12 lg:h-auto md:h-auto items-center ${ativo ? "animeLeftMobile flex-col z-30 text-2xl absolute h-[550px] left-0 -top-4 w-full animateLeft bg-[#101010] items-center justify-center text-center mt-4" : "h-0 overflow-hidden"}`}>
-                        <LinkRedirect href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')}>
-                            Sobre
-                        </LinkRedirect>
-                        <LinkRedirect href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')}>
-                            Projetos
-                        </LinkRedirect>
-                        <LinkRedirect href="#contato" onClick={(e) => scrollToSection(e, '#contato')}>
-                            Contato
-                        </LinkRedirect>
-                        <Link href="/Curriculo.pdf" download="Curriculo.pdf" target="_blank">
-                            <Button
-                                className="w-32 h-10 text-lg">
-                                Curriculo
-                            </Button>
-                        </Link>
-                    </ul>
+
+                <nav className={`flex flex-col lg:flex-row gap-12 items-center absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-[#101010] lg:bg-transparent text-center 
+                    transition-all duration-300 ease-in-out 
+                    ${ativo ? "opacity-100 scale-100 h-[450px] absolute -top-0 pt-32" : "opacity-0 h-0 lg:opacity-100 lg:h-auto"}`}>
+
+                    <LinkRedirect href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')}>
+                        Sobre
+                    </LinkRedirect>
+                    <LinkRedirect href="#projetos" onClick={(e) => scrollToSection(e, '#projetos')}>
+                        Projetos
+                    </LinkRedirect>
+                    <LinkRedirect href="#contato" onClick={(e) => scrollToSection(e, '#contato')}>
+                        Contato
+                    </LinkRedirect>
+                    <Link href="/Curriculo.pdf" download="Curriculo.pdf" target="_blank">
+                        <Button className="w-32 h-10 text-lg">
+                            Curriculo
+                        </Button>
+                    </Link>
                 </nav>
             </div>
         </header>
