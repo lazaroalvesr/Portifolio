@@ -14,7 +14,7 @@ export const Sobre = () => {
     return (
         <section
             ref={ref}
-            className="lg:mt-32 mt-[80px] lg:max-w-7xl pl-4 m-auto">
+            className="lg:mt-32 mt-[80px] lg:max-w-7xl  m-auto">
             <div className="flex lg:flex-row flex-col md:flex-row" id="sobre">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -30,7 +30,7 @@ export const Sobre = () => {
                             className="transform rotate-45"
                         />
                         Sobre Mim</h1>
-                    <div className="lg:w-[700px] pr-8 lg:pr-0 md:w-[400px] flex flex-col mt-12  ml-10 text-[#979797]">
+                    <div className="lg:w-[700px] pr-9 lg:pr-0 md:w-[400px] flex flex-col mt-12  ml-10 text-[#979797]">
                         <p className="pb-4">
                             Desenvolvedor Front-End ReactJS com 3 anos de experiência. Especializado em TypeScript, ReactJS,
                             Next.js, Tailwind CSS e Styled-Components. Também possuo experiência com desenvolvimento back-end

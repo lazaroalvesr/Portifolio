@@ -10,11 +10,7 @@ export function Header() {
     const [ativo, setAtivo] = useState(false)
 
     function toggle() {
-        if (ativo) {
-            setTimeout(() => setAtivo(false), 300); // Espera a animação antes de esconder
-        } else {
-            setAtivo(true);
-        }
+        setAtivo(!ativo)
     }
 
     function scrollToSection(event: MouseEvent<HTMLAnchorElement>, id: string) {
