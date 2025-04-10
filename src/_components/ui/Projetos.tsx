@@ -11,7 +11,7 @@ const projects = [
         href: "https://land-page-gym.vercel.app/",
         src: "/img/LandPage_GYM.png",
         titulo: "BestGym",
-        sobre: "BestGym was developed to present the products and services we offer, as well as the unique features that make our gym special.",
+        sobre: "A BestGym foi desenvolvida para apresentar os produtos e serviços que oferecemos, assim como as características únicas que tornam nossa academia especial.",
         tec: ["Typescript", "NextJS", "Styled-Components", "ReactJS"]
     },
     {
@@ -19,7 +19,7 @@ const projects = [
         href: "https://arrudabombas.com.br/",
         src: "/img/arruda-bombas.png",
         titulo: "Arruda Bombas Hidráulicas",
-        sobre: "The Arruda Bombas Hidráulicas website showcases the company's products and services, such as concrete pumps, and facilitates customer contact. The design is optimized for intuitive and accessible navigation.",
+        sobre: "O site da Arruda Bombas Hidráulicas apresenta os produtos e serviços da empresa, como bombas de concreto, e facilita o contato com os clientes. O design é otimizado para uma navegação intuitiva e acessível.",
         tec: ["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]
     },
     {
@@ -27,7 +27,7 @@ const projects = [
         href: "https://github.com/lazaroalvesr/raffleflow-frontend",
         src: "/img/RifaFlow.png",
         titulo: "RifaFlow",
-        sobre: "Developed with Next.js and Tailwind CSS on the front-end and NestJS with Prisma and Docker on the back-end, RifaFlow is a platform for creating and managing online raffles, focusing on functionality and security.",
+        sobre: "Desenvolvido com Next.js e Tailwind CSS no front-end e NestJS com Prisma e Docker no back-end, o RifaFlow é uma plataforma para criação e gerenciamento de rifas online, com foco em funcionalidade e segurança.",
         tec: ["Typescript", "NextJS", "Tailwind CSS", "NodeJs", "PostgreSQL", "ReactJS"]
     },
     {
@@ -35,7 +35,7 @@ const projects = [
         href: "https://meuadvogadoonline.vercel.app/",
         src: "/img/meu_advogado_online.png",
         titulo: "Dr Adriano D. Signer",
-        sobre: "A modern platform for lawyers to offer legal support in a practical and accessible way. With an intuitive system and WhatsApp integration, it facilitates communication between professionals and clients.",
+        sobre: "Landing page desenvolvida para apresentar de forma clara e objetiva uma oferta específica, com foco na conversão de visitantes em clientes.Possui design responsivo, carregamento rápido e estrutura otimizada para SEO e campanhas de marketing digital.",
         tec: ["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]
     }
 ];
