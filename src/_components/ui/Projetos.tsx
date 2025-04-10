@@ -35,7 +35,7 @@ const projects = [
         href: "https://meuadvogadoonline.vercel.app/",
         src: "/img/meu_advogado_online.png",
         titulo: "Dr Adriano D. Signer",
-        sobre: "Landing page desenvolvida para apresentar de forma clara e objetiva uma oferta específica, com foco na conversão de visitantes em clientes.Possui design responsivo, carregamento rápido e estrutura otimizada para SEO e campanhas de marketing digital.",
+        sobre: "Site desenvolvido para apresentar de forma clara e objetiva uma oferta específica, com foco na conversão de visitantes em clientes. Possui design responsivo, carregamento rápido e estrutura otimizada para SEO e campanhas de marketing digital.",
         tec: ["Typescript", "NextJS", "Tailwind CSS", "ReactJS"]
     }
 ];
