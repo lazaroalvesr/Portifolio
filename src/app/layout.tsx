@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/_components/ui/Header";
 import { Footer } from "@/_components/ui/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const PoppinsFont = Poppins({
   weight: ['400'],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={PoppinsFont.className}>
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
