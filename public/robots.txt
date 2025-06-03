@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lazaroalvesr.com
+
+# Sitemaps
+Sitemap: https://lazaroalvesr.com/sitemap.xml
