@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Desenvolvedor Web FullStack | Especializado em React, Next.js e Node.js**
+**Desenvolvedor Web FullStack | Especializado em React, Next.js e Node.js, JAVA, SPRINGBOOT, NESTJS**
 
 ![App Screenshot](./public/img/capa_do_site.png)
 
