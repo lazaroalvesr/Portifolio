@@ -29,7 +29,7 @@ export const CardProjetos = ({ index, src, href, alt, subTitle, title, descripti
                 </div>
             </div>
             <div className="lg:w-147.75 lg:pb-0 pb-8 md:w-96 ">
-                <h4 className="text-gray-50 font-semibold text-[16px] pb-4 uppercase">{title}</h4>
+                <h2 className="text-gray-50 font-semibold text-[16px] pb-4 uppercase">{title}</h2>
                 <p className="text-[#E3E4E6]/70  font-medium lg:text-[16px] text-[15px] leading-relaxed">
                     {description}
                 </p>
