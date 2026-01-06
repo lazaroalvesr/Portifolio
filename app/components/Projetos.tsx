@@ -36,6 +36,18 @@ const meusProjetos = [
                 Site completo para <span className="text-white font-bold">provedor de internet fibra óptica</span>, focado em facilitar a vida do cliente. A página organiza os planos de forma clara para <span className="text-white font-bold">vender mais rápido</span> e oferece uma central onde o assinante resolve tudo sozinho.
             </>
         )
+    },
+    {
+        title: "UAI+ Operadora",
+        src: "/img/site_uai+.png",
+        alt: "Foto site da UAI+ Operadora",
+        href: "https://www.uaimais.com.br/",
+        subTitle: "Site Institucional & Vendas",
+        description: (
+            <>
+                Site completo para <span className="text-white font-bold">operadora de telefonia móvel</span>, desenvolvido para <span className="text-white font-bold">converter visitantes em clientes</span>. Apresenta os planos de forma estratégica para <span className="text-white font-bold">acelerar vendas</span>.
+            </>
+        )
     }
 ]
 
