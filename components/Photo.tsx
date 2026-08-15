@@ -6,6 +6,7 @@ type PhotoProps = {
   src?: string;
   className?: string;
   variant?: "person" | "work" | "site" | "idea";
+  sizes?: string;
 };
 
 const PERSON_ICON =
@@ -43,17 +44,15 @@ const VARIANT_STYLE: Record<NonNullable<PhotoProps["variant"]>, CSSProperties> =
   },
 };
 
-export default function Photo({ alt, src, className = "", variant = "person" }: PhotoProps) {
+export default function Photo({
+  alt,
+  src,
+  className = "",
+  variant = "person",
+  sizes = "(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw",
+}: PhotoProps) {
   if (src) {
-    return (
-      <Image
-        src={src}
-        fill
-        sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
-        alt={alt}
-        className={`object-cover ${className}`}
-      />
-    );
+    return <Image src={src} fill sizes={sizes} alt={alt} className={`object-cover ${className}`} />;
   }
 
   return (

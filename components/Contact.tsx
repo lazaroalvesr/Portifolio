@@ -12,7 +12,12 @@ export default function Contact() {
         <Reveal>
           <div className="grid grid-cols-[0.85fr_1.15fr] items-center gap-14 max-[980px]:grid-cols-1 max-[980px]:gap-10">
             <div className="relative mx-auto aspect-4/5 w-full max-w-100 overflow-hidden rounded-xl bg-ink shadow-[0_30px_60px_rgba(16,25,43,0.2)]">
-              <Photo src="/images/alves-r.jpg" alt="Lázaro Alves" className="h-full w-full" />
+              <Photo
+                src="/images/alves-r.jpg"
+                alt="Lázaro Alves"
+                className="h-full w-full"
+                sizes="(max-width: 980px) 90vw, 400px"
+              />
 
               <span
                 aria-hidden="true"

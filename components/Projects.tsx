@@ -157,6 +157,7 @@ export default function Projects() {
                           src={project.src}
                           variant="site"
                           className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]"
+                          sizes="(max-width: 640px) 96vw, (max-width: 980px) 76vw, 62vw"
                         />
                         <span
                           aria-hidden="true"

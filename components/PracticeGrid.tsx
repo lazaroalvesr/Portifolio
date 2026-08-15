@@ -37,7 +37,7 @@ export default function PracticeGrid() {
               </h2>
             </div>
 
-            <p className="max-w-[380px] self-center pt-4 text-[13.5px] leading-[1.7] text-dim lg:pt-0">
+            <p className="max-w-95 self-center pt-4 text-[13.5px] leading-[1.7] text-dim lg:pt-0">
               Três frentes que cobrem o essencial pra tirar um negócio do papel e colocar no ar.
             </p>
           </div>
@@ -71,12 +71,13 @@ export default function PracticeGrid() {
                       src={item.src}
                       variant="site"
                       className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]"
+                      sizes="(max-width: 640px) 100vw, 33vw"
                     />
                   </div>
                 </div>
 
                 <div className="relative">
-                  <span className="inline-block h-[3px] w-8 rounded-full bg-accent transition-[width] duration-400 group-hover:w-12" />
+                  <span className="inline-block h-0.75 w-8 rounded-full bg-accent transition-[width] duration-400 group-hover:w-12" />
                   <h3 className="mt-3 text-[19px] font-bold">{item.title}</h3>
                   <p className="mt-1.5 text-[13px] leading-[1.7] text-dim">{item.description}</p>
                 </div>
