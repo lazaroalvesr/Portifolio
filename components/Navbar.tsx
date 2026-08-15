@@ -12,8 +12,21 @@ const linkClass =
   "shrink-0 whitespace-nowrap rounded-full px-4 py-2.25 text-[13.5px] font-medium text-[#c3c8d4] transition-colors duration-250 hover:bg-[#1c2536] hover:text-white max-[980px]:px-2.75 max-[980px]:py-2 max-[980px]:text-[12.5px] max-[560px]:px-2.5 max-[560px]:py-1.75";
 const linkActiveClass = "bg-[#1c2536] text-white";
 
+function scrollToHref(href: string) {
+  const target = document.querySelector(href);
+  if (!target) return;
+  const rect = target.getBoundingClientRect();
+  const top = rect.top + window.scrollY - (window.innerHeight - rect.height) / 2;
+  window.scrollTo({ top, behavior: "smooth" });
+}
+
 export default function Navbar() {
   const [activeHref, setActiveHref] = useState(navLinks[0].href);
+
+  function handleNavClick(e: React.MouseEvent, href: string) {
+    e.preventDefault();
+    scrollToHref(href);
+  }
 
   useEffect(() => {
     const sections = navLinks
@@ -47,13 +60,14 @@ export default function Navbar() {
           <Link
             key={link.label}
             href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
             className={`${linkClass} ${activeHref === link.href ? linkActiveClass : ""}`}
           >
             {link.label}
           </Link>
         ))}
 
-        <Link href="#top" className="shrink-0">
+        <Link href="#top" onClick={(e) => handleNavClick(e, "#top")} className="shrink-0">
           <Logo />
         </Link>
 
@@ -61,6 +75,7 @@ export default function Navbar() {
           <Link
             key={link.label}
             href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
             className={`${linkClass} ${activeHref === link.href ? linkActiveClass : ""}`}
           >
             {link.label}
