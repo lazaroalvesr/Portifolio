@@ -21,13 +21,13 @@ export default function Process() {
                 <i className={pillNoteDot} /> Como Trabalho
               </span>
               <h2 className={heading}>
-                <span className="text-accent" aria-hidden="true">›</span> Do Primeiro Papo
+                <span className="text-accent" aria-hidden="true">›</span> Do Primeira Conversa
                 <br />
                 Ao Site No Ar
               </h2>
             </div>
 
-            <p className="max-w-[400px] self-center pt-4 text-[13.5px] leading-[1.7] text-dim lg:pt-0">
+            <p className="max-w-100 self-center pt-4 text-[13.5px] leading-[1.7] text-dim lg:pt-0">
               Um processo simples e direto, sem burocracia — só passos claros do primeiro contato até o site no ar.
             </p>
           </div>
