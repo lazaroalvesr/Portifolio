@@ -1,44 +1,39 @@
-import { wrap } from "@/lib/ui";
-
-const columns = [
-  { title: "Empresa", links: ["Sobre", "Projetos", "Contato"] },
-  { title: "Serviços", links: ["Design UI/UX", "Desenvolvimento Web", "Sistemas sob Demanda"] },
-];
+import { heroGradient, wrap } from "@/lib/ui";
+import { whatsappHref } from "@/lib/data";
+import Image from "next/image";
+import Link from "next/link";
+import Reveal from "./Reveal";
 
 const socialBtnClass =
-  "grid h-7.5 w-7.5 place-items-center rounded-full bg-ink text-white transition-transform duration-200 hover:-translate-y-0.5 [&_svg]:h-3.75 [&_svg]:w-3.75";
+  "grid h-9.5 w-9.5 place-items-center rounded-full bg-white/10 text-white transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-white/25 [&_svg]:h-4 [&_svg]:w-4";
 
 export default function Footer() {
   return (
-    <footer className={wrap}>
-      <div className="my-5.5 rounded-xl bg-accent px-11 pt-11 pb-6.5 text-white max-[980px]:px-6 max-[980px]:pt-8.5 max-[980px]:pb-5.5">
-        <div className="grid grid-cols-[1.4fr_1fr_1fr] gap-8 max-[980px]:gap-5 max-[640px]:gap-4 max-[480px]:grid-cols-1 max-[480px]:gap-6">
-          <div>
-            <div className="flex items-center gap-2 text-2xl font-extrabold tracking-[-1px]">Alves R</div>
-            <p className="mt-3.5 max-w-62.5 text-[12.5px] leading-[1.7] text-white">
-              Eu crio sites e sistemas sob demanda que ajudam marcas a crescer.
-            </p>
+    <footer className={`${heroGradient} text-white`}>
+      <Reveal>
+        <div className={`${wrap} flex flex-wrap items-center justify-between gap-5 py-7`}>
+          <div className="flex items-center gap-3.5">
+            <Link href="#top" className="shrink-0">
+              <Image src="/icon.svg" alt="Ícone" width={24} height={24} className="h-6 w-6 rounded-[6px]" />
+            </Link>
+            <div className="flex flex-col">
+              <p>Lázaro Alves R</p>
+              <div className="text-xs text-white/50">
+                © {new Date().getFullYear()} — Todos os direitos reservados
+              </div>
+            </div>
           </div>
 
-          {columns.map((column) => (
-            <div key={column.title}>
-              <h3 className="mb-3.5 text-xs font-bold tracking-[0.6px] uppercase">{column.title}</h3>
-              <ul className="flex flex-col gap-2.25">
-                {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#top" className="text-[12.5px] text-white hover:underline">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8.5 flex flex-wrap items-center justify-between gap-3.5 border-t border-[rgba(20,20,20,0.18)] pt-4.5 text-xs text-white">
-          <span>© {new Date().getFullYear()} Alves R. Todos os direitos reservados.</span>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className={socialBtnClass}
+            >
+              <Image src="/images/iconWhatsapp.png" alt="" width={16} height={16} className="h-4 w-4 object-contain" />
+            </a>
             <a
               href="https://www.instagram.com/alvesrsites/"
               target="_blank"
@@ -67,7 +62,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
+      </Reveal>
     </footer>
   );
 }

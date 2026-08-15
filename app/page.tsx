@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import Services from "@/components/Services";
+import PracticeGrid from "@/components/PracticeGrid";
+import Process from "@/components/Process";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -14,16 +15,25 @@ export default function Home() {
 
       <main>
         <Hero />
+        <Marquee items={["Inovar", "Inspirar", "Criar", "Construir", "Entregar", "Evoluir"]} variant="small"/>
 
         <Projects />
-        <Services />
+        <PracticeGrid />
+        <Process />
 
-        <Marquee items={["Inovar", "Inspirar", "Criar", "Construir", "Entregar", "Evoluir"]} />
 
-        {/* <Testimonials /> */}
 
         <Marquee
-          items={["Design UX", "Design de App", "Dashboard", "Wireframe", "Pesquisa de Usuário"]}
+          items={[
+            "Site profissional",
+            "Design personalizado",
+            "WhatsApp integrado",
+            "Apareça no Google",
+            "Layout moderno",
+            "Feito sob medida",
+            "Acompanhamento direto",
+            "Entrega no prazo",
+          ]}
           variant="small"
         />
 

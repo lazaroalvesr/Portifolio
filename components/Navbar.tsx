@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { navLinks } from "@/lib/data";
+import Logo from "./Logo";
 
 const leftLinks = navLinks.slice(0, 2);
 const rightLinks = navLinks.slice(2);
 
 const linkClass =
-  "shrink-0 whitespace-nowrap rounded-full px-4 py-2.25 text-[13.5px] font-medium text-[#d2d2d2] transition-colors duration-250 hover:bg-[#2c2c2c] hover:text-white max-[980px]:px-2.75 max-[980px]:py-2 max-[980px]:text-[12.5px] max-[560px]:px-2.5 max-[560px]:py-1.75";
-const linkActiveClass = "bg-[#2c2c2c] text-accent";
+  "shrink-0 whitespace-nowrap rounded-full px-4 py-2.25 text-[13.5px] font-medium text-[#c3c8d4] transition-colors duration-250 hover:bg-[#1c2536] hover:text-white max-[980px]:px-2.75 max-[980px]:py-2 max-[980px]:text-[12.5px] max-[560px]:px-2.5 max-[560px]:py-1.75";
+const linkActiveClass = "bg-[#1c2536] text-white";
 
 export default function Navbar() {
   const [activeHref, setActiveHref] = useState(navLinks[0].href);
@@ -39,33 +41,30 @@ export default function Navbar() {
     <div className="fixed inset-x-0 top-4 z-100 flex justify-center px-4 pointer-events-none max-[560px]:px-2.5">
       <nav
         aria-label="Principal"
-        className="pointer-events-auto flex max-w-[calc(100vw-20px)] items-center gap-1.5 overflow-x-auto rounded-full border border-line bg-[rgba(28,28,28,0.86)] px-2.5 py-1.75 backdrop-blur-[14px] scrollbar-none max-[560px]:gap-0.5 max-[560px]:p-1.5"
+        className="pointer-events-auto flex max-w-[calc(100vw-20px)] items-center gap-1.5 overflow-x-auto rounded-full border border-line bg-[rgba(16,25,43,0.9)] px-2.5 py-1.75 backdrop-blur-[14px] scrollbar-none max-[560px]:gap-0.5 max-[560px]:p-1.5"
       >
         {leftLinks.map((link) => (
-          <a
+          <Link
             key={link.label}
             href={link.href}
             className={`${linkClass} ${activeHref === link.href ? linkActiveClass : ""}`}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
 
-        <a
-          href="#top"
-          className="flex shrink-0 items-center gap-1.75 whitespace-nowrap rounded-full bg-black px-4.5 py-2.25 text-[14.5px] font-extrabold tracking-[-0.2px] max-[980px]:px-3.25 max-[980px]:py-2 max-[560px]:px-3 max-[560px]:py-1.75"
-        >
-          Alves R
-        </a>
+        <Link href="#top" className="shrink-0">
+          <Logo />
+        </Link>
 
         {rightLinks.map((link) => (
-          <a
+          <Link
             key={link.label}
             href={link.href}
             className={`${linkClass} ${activeHref === link.href ? linkActiveClass : ""}`}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </nav>
     </div>

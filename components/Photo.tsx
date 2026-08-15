@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 
 type PhotoProps = {
@@ -45,13 +46,19 @@ const VARIANT_STYLE: Record<NonNullable<PhotoProps["variant"]>, CSSProperties> =
 export default function Photo({ alt, src, className = "", variant = "person" }: PhotoProps) {
   if (src) {
     return (
-      <img src={src} alt={alt} className={`object-cover ${className}`} />
+      <Image
+        src={src}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
+        alt={alt}
+        className={`object-cover ${className}`}
+      />
     );
   }
 
   return (
     <div
-      className={`bg-[#ededea] bg-no-repeat ${variant === "idea" ? "animate-[idea-pulse_3s_ease-in-out_infinite]" : ""} ${className}`}
+      className={`bg-surface-2 bg-no-repeat ${variant === "idea" ? "animate-[idea-pulse_3s_ease-in-out_infinite]" : ""} ${className}`}
       style={VARIANT_STYLE[variant]}
       role="img"
       aria-label={alt}

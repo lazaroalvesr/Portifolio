@@ -10,19 +10,25 @@ const AUTOPLAY_MS = 4500;
 const GAP_PX = 24;
 
 function getSlideWidth() {
-  if (window.innerWidth <= 640) return 88;
+  if (window.innerWidth <= 640) return 96;
   if (window.innerWidth <= 980) return 76;
   return 62;
 }
 
 const navBtnClass =
-  "grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-line bg-surface-2 text-white transition-[background,color,border-color,opacity,transform,box-shadow] duration-400 ease-[cubic-bezier(0.22,0.8,0.3,1)] hover:scale-110 active:scale-95 active:duration-100 [&_svg]:block [&_svg]:h-4.5 [&_svg]:w-4.5 [&_svg]:transition-transform [&_svg]:duration-400 [&_svg]:ease-[cubic-bezier(0.22,0.8,0.3,1)]";
+  "grid h-11 w-11 cursor-pointer place-items-center rounded-full border border-line bg-surface-2 text-ink transition-[background,color,border-color,opacity,transform,box-shadow] duration-400 ease-[cubic-bezier(0.22,0.8,0.3,1)] hover:scale-110 active:scale-95 active:duration-100 [&_svg]:block [&_svg]:h-4.5 [&_svg]:w-4.5 [&_svg]:transition-transform [&_svg]:duration-400 [&_svg]:ease-[cubic-bezier(0.22,0.8,0.3,1)]";
 
 export default function Projects() {
-  const [index, setIndex] = useState(0);
+  const slideCount = projects.length;
+  const displayItems = Array.from({ length: slideCount * 3 }, (_, i) => ({
+    project: projects[i % slideCount],
+  }));
+
+  const [position, setPosition] = useState(slideCount);
+  const [withTransition, setWithTransition] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [paused, setPaused] = useState(false);
   const [slideWidth, setSlideWidth] = useState(62);
-  const maxIndex = projects.length - 1;
   const centerOffset = (100 - slideWidth) / 2;
 
   useEffect(() => {
@@ -32,26 +38,44 @@ export default function Projects() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  const displayItems = [
-    { project: projects[maxIndex], realIndex: maxIndex },
-    ...projects.map((project, realIndex) => ({ project, realIndex })),
-    { project: projects[0], realIndex: 0 },
-  ];
-  const activePosition = index + 1;
+  function goTo(nextPosition: number) {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setWithTransition(true);
+    setPosition(nextPosition);
+  }
 
   function go(direction: -1 | 1) {
-    setIndex((current) => (current + direction + projects.length) % projects.length);
+    goTo(position + direction);
   }
+
+  function handleTrackTransitionEnd(e: React.TransitionEvent<HTMLDivElement>) {
+    if (e.target !== e.currentTarget) return;
+
+    if (position < slideCount) {
+      setWithTransition(false);
+      setPosition((p) => p + slideCount);
+    } else if (position >= slideCount * 2) {
+      setWithTransition(false);
+      setPosition((p) => p - slideCount);
+    }
+
+    setIsAnimating(false);
+  }
+
+  useEffect(() => {
+    if (withTransition) return;
+    const raf = requestAnimationFrame(() => setWithTransition(true));
+    return () => cancelAnimationFrame(raf);
+  }, [withTransition]);
 
   useEffect(() => {
     if (paused) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const timer = setTimeout(() => {
-      setIndex((current) => (current >= maxIndex ? 0 : current + 1));
-    }, AUTOPLAY_MS);
+    const timer = setTimeout(() => go(1), AUTOPLAY_MS);
     return () => clearTimeout(timer);
-  }, [index, paused, maxIndex]);
+  }, [position, paused]);
 
   return (
     <section className={section} id="projects">
@@ -60,14 +84,14 @@ export default function Projects() {
           <div className={headRow}>
             <div>
               <span className={`${pillNote} mb-3.5`}>
-                <i className={pillNoteDot} /> Portfólio
+                <i className={pillNoteDot} /> Projetos
               </span>
               <h2 className={heading}>
-                <span className="text-accent" aria-hidden="true">›</span> Projetos Que
+                <span className="text-accent" aria-hidden="true">›</span> Alguns trabalhos 
                 <br />
-                Já Entreguei
+                que entreguei
               </h2>
-              <p>Uma seleção dos sites e sistemas que já coloquei no ar pra clientes reais.</p>
+              <p className="pt-4 lg:pt-4">Sites desenvolvidos para diferentes segmentos e que já estão no ar, gerando presença digital.</p>
             </div>
 
             <div className="flex items-center gap-2.5 self-center">
@@ -105,20 +129,27 @@ export default function Projects() {
             style={{ "--slide-width": `${slideWidth}%` } as CSSProperties}
           >
             <div
-              className="relative z-1 flex gap-6 transition-transform duration-500 ease-[cubic-bezier(0.22,0.8,0.3,1)]"
+              onTransitionEnd={handleTrackTransitionEnd}
+              className={`relative z-1 flex gap-6 ease-[cubic-bezier(0.22,0.8,0.3,1)] ${withTransition ? "transition-transform duration-500" : ""}`}
               style={{
-                transform: `translateX(calc(${centerOffset}% - ${activePosition} * (${slideWidth}% + ${GAP_PX}px)))`,
+                transform: `translateX(calc(${centerOffset}% - ${position} * (${slideWidth}% + ${GAP_PX}px)))`,
               }}
             >
-              {displayItems.map(({ project, realIndex }, i) => {
-                const isActive = i === activePosition;
+              {displayItems.map(({ project }, i) => {
+                const isActive = i === position;
+                const onSlideClick = (e: React.MouseEvent) => {
+                  if (!isActive) {
+                    e.preventDefault();
+                    goTo(i);
+                  }
+                };
                 const content = (
                   <>
-                    <div className="overflow-hidden rounded-md border border-line bg-surface-2 transition-[border-color,box-shadow] duration-300 group-hover:border-accent group-hover:shadow-[0_24px_44px_rgba(0,0,0,0.35)]">
-                      <div className="flex gap-1.5 border-b border-line px-3.5 py-3" aria-hidden="true">
-                        <span className="h-2 w-2 rounded-full bg-line" />
-                        <span className="h-2 w-2 rounded-full bg-line" />
-                        <span className="h-2 w-2 rounded-full bg-line" />
+                    <div className="overflow-hidden rounded-sm border border-line bg-surface transition-[border-color,box-shadow] duration-300 group-hover:border-accent group-hover:shadow-[0_24px_44px_rgba(16,25,43,0.14)]">
+                      <div className="flex gap-1.5 border-b border-line px-3 py-1.75" aria-hidden="true">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#febc2e]" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#28c840]" />
                       </div>
                       <div className="relative aspect-[2.1/1] overflow-hidden">
                         <Photo
@@ -127,29 +158,31 @@ export default function Projects() {
                           variant="site"
                           className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]"
                         />
+                        <span
+                          aria-hidden="true"
+                          className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,rgba(11,18,32,0)_0%,rgba(11,18,32,0.65)_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        />
                         {project.url && (
-                          <div className="absolute inset-0 flex items-end justify-end bg-[linear-gradient(180deg,rgba(16,25,43,0)_45%,rgba(16,25,43,0.78)_100%)] p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2.5 text-[13px] font-bold text-ink">
-                              Visitar site <span aria-hidden="true">↗</span>
+                          <div className="absolute inset-0 flex items-start justify-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span className="grid h-11 w-11 place-items-center rounded-full bg-accent text-white shadow-[0_10px_24px_rgba(16,25,43,0.35)]">
+                              <span aria-hidden="true" className="text-xl">↗</span>
                             </span>
                           </div>
                         )}
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3.5">
-                      <span className="min-w-5.5 text-[13px] font-bold text-accent">
-                        {String(realIndex + 1).padStart(2, "0")}
+                    <div>
+                      <span className={pillNote}>
+                        <i className={pillNoteDot} /> {project.type}
                       </span>
-                      <div>
-                        <div className="text-[17px] font-bold max-[640px]:text-[15px]">{project.name}</div>
-                        <div className="mt-0.5 text-[12.5px] text-dim">{project.type}</div>
-                      </div>
+                      <h3 className="mt-3.5 text-[19px] font-bold max-[640px]:text-[16px]">{project.name}</h3>
+                      <p className="mt-1.5 text-[13.5px] leading-[1.7] text-dim">{project.result}</p>
                     </div>
                   </>
                 );
 
-                const slideClassName = `group flex flex-[0_0_var(--slide-width,62%)] flex-col gap-4 text-inherit transition-[opacity,transform] duration-400 ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-35"}`;
+                const slideClassName = `group flex flex-[0_0_var(--slide-width,62%)] flex-col gap-4 text-inherit ${withTransition ? "transition-[opacity,transform] duration-400" : ""} ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-35"}`;
                 const key = `${project.name}-${i}`;
 
                 return project.url ? (
@@ -158,6 +191,7 @@ export default function Projects() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={onSlideClick}
                     className={slideClassName}
                     aria-hidden={!isActive}
                     tabIndex={isActive ? 0 : -1}
@@ -165,7 +199,12 @@ export default function Projects() {
                     {content}
                   </a>
                 ) : (
-                  <div key={key} className={slideClassName} aria-hidden={!isActive}>
+                  <div
+                    key={key}
+                    onClick={onSlideClick}
+                    className={slideClassName}
+                    aria-hidden={!isActive}
+                  >
                     {content}
                   </div>
                 );

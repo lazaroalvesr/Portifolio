@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -10,9 +12,11 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 const siteUrl = "https://www.lazaroalvesr.com";
-const title = "Alves R — Presença digital à altura do seu trabalho";
+
+const title = "Desenvolvimento de Sites e Sistemas Sob Demanda | Alves R";
+
 const description =
-  "Sem sumiço, sem terceirizado. Desenvolvimento de sites e sistemas sob demanda com projeto individual, prazo de três semanas e acompanhamento direto com o desenvolvedor.";
+  "Sem sumiço, sem terceirizado. Sites e sistemas sob demanda, projeto individual, entrega em três semanas e contato direto com o desenvolvedor.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,23 +25,10 @@ export const metadata: Metadata = {
     template: "%s | Alves R",
   },
   description,
-  keywords: [
-    "desenvolvedor web",
-    "criação de sites",
-    "desenvolvimento web freelancer",
-    "sistemas sob demanda",
-    "design UI/UX",
-    "site institucional",
-    "desenvolvedor freelance Brasil",
-    "Alves R",
-  ],
   authors: [{ name: "Lázaro Alves" }],
   creator: "Lázaro Alves",
   publisher: "Lázaro Alves",
   category: "technology",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -50,7 +41,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: title,
+        alt: "Alves R — Desenvolvimento de sites e sistemas sob demanda",
       },
     ],
   },
@@ -73,7 +64,7 @@ export const metadata: Metadata = {
   },
 };
 
-const personJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -97,20 +88,50 @@ const personJsonLd = {
         "https://www.instagram.com/alvesrsites/",
         "https://www.linkedin.com/in/l%C3%A1zaro-alves-r/",
       ],
-      knowsAbout: ["Desenvolvimento Web", "Design UI/UX", "Sistemas sob Demanda"],
+      knowsAbout: [
+        "Desenvolvimento Web",
+        "Design UI/UX",
+        "Sistemas sob Demanda",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#service`,
+      name: "Alves R — Desenvolvimento Web",
+      description,
+      url: siteUrl,
+      image: `${siteUrl}/og-image.png`,
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: { "@type": "Country", name: "Brasil" },
+      availableLanguage: { "@type": "Language", name: "Portuguese" },
+      serviceType: [
+        "Desenvolvimento de sites",
+        "Sistemas sob demanda",
+        "Design UI/UX",
+      ],
+      sameAs: [
+        "https://www.instagram.com/alvesrsites/",
+        "https://www.linkedin.com/in/l%C3%A1zaro-alves-r/",
+      ],
     },
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR" className={jakarta.variable}>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <SmoothScroll />
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

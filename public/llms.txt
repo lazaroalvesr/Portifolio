@@ -1,0 +1,18 @@
+# Alves R
+
+> Portfolio site of Lázaro Alves (Alves R), a freelance web developer based in Brazil offering UI/UX design, web development, and custom systems. Content is in Brazilian Portuguese (pt-BR).
+
+Alves R builds individually-scoped websites and systems with an agreed deadline set upfront and direct communication with the developer (no agency, no disappearing after the contract is signed). Typical delivery timeline is around three weeks.
+
+## Site
+
+- [Home](https://www.lazaroalvesr.com/): Hero, featured work, process, and contact — the whole one-page site.
+- [Projects](https://www.lazaroalvesr.com/#projects): Case studies delivered for clients such as MG Net and Minas Online (internet providers), Uai+ (mobile carrier), Arruda Bombas (institutional site), and Dra. Geanne Lopes (law firm site).
+- [Process](https://www.lazaroalvesr.com/#process): Discovery call → written proposal with fixed scope/deadline/price → design & development with progress updates → revision round → launch with post-launch support.
+- [Contact](https://www.lazaroalvesr.com/#contact): Direct contact via WhatsApp to start a project.
+
+## Notes
+
+- Built with Next.js (App Router), React, and Tailwind CSS.
+- Structured data (schema.org Person/WebSite) is embedded on the page for the author, Lázaro Alves.
+- Social profiles: [Instagram](https://www.instagram.com/alvesrsites/), [LinkedIn](https://www.linkedin.com/in/l%C3%A1zaro-alves-r/).

@@ -12,7 +12,7 @@ const AVATAR_ICON = {
 };
 
 const navBtnClass =
-  "grid h-10 w-10 place-items-center rounded-full border border-line bg-surface-2 text-white transition-[background,color,opacity] duration-250 hover:border-accent hover:bg-accent hover:text-ink disabled:cursor-not-allowed disabled:opacity-40 [&_svg]:block [&_svg]:h-4 [&_svg]:w-4";
+  "grid h-10 w-10 place-items-center rounded-full border border-line bg-surface-2 text-ink transition-[background,color,opacity] duration-250 hover:border-accent hover:bg-accent hover:text-ink disabled:cursor-not-allowed disabled:opacity-40 [&_svg]:block [&_svg]:h-4 [&_svg]:w-4";
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -53,7 +53,7 @@ export default function Testimonials() {
                 <article
                   key={item.name}
                   className={`grow-0 shrink-0 rounded-md border border-line p-6 transition-[background,border-color] duration-350 ${
-                    i === highlighted ? "border-[#3a3a3a] bg-surface-2" : "bg-surface"
+                    i === highlighted ? "border-accent/50 bg-surface-2" : "bg-surface"
                   }`}
                   style={{ flexBasis: `calc(${100 / perView}% - ${(16 * (perView - 1)) / perView}px)` }}
                   aria-hidden={i < index || i >= index + perView}
