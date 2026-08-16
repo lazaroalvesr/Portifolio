@@ -1,69 +1,85 @@
 # Alves R
 
-Landing page da Alves R em Next.js (App Router) + TypeScript + CSS Modules.
+**Desenvolvimento de sites e sistemas sob demanda.**
+Site institucional de Lázaro Alves (Alves R) — desenvolvedor web.
 
-## Rodar
+🔗 [www.lazaroalvesr.com](https://www.lazaroalvesr.com/)
 
-```bash
-npm install
-npm run dev
-```
+<p align="center">
+  <img src="public/images/Portifolio.png" alt="Preview do site Alves R" width="100%" />
+</p>
 
-Abra http://localhost:3000
+<p align="center">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000000?logo=next.js&logoColor=white">
+  <img alt="React" src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white">
+</p>
 
-## Build de produção
+## Sobre
 
-```bash
-npm run build
-npm start
-```
+Sem sumiço, sem terceirizado. Sites e sistemas sob demanda, projeto conduzido
+diretamente por mim do primeiro contato à entrega, com prazo combinado logo
+no início.
+
+Este repositório é o código do meu próprio site — a vitrine que uso pra
+mostrar os projetos que já entreguei e captar novos contatos pelo WhatsApp.
+
+## Stack
+
+- **Next.js 15** (App Router) + **React 19** + **TypeScript**
+- **Tailwind CSS v4** — design tokens em `app/globals.css`
+- **Lenis** — smooth scroll
+- **next/image** — otimização e lazy loading de imagens
+- SEO: metadata + JSON-LD (`app/layout.tsx`), `sitemap.ts`, `robots.ts`, `manifest.ts`
+
+## Funcionalidades
+
+- Header flutuante com scroll suave até cada seção, sem `#` sujando a URL
+- Carrossel infinito de projetos com autoplay e navegação manual
+- Seções com animação de entrada ao rolar a página (`Reveal`)
+- Botão flutuante de WhatsApp
+- Layout responsivo, do mobile ao desktop
 
 ## Estrutura
 
 ```
 app/
-  layout.tsx        fonte, metadata, <html>/<body>
-  page.tsx          composição das seções
-  globals.css       design tokens (cores, raios, espaçamentos) e reset
-components/         uma seção por arquivo, cada uma com seu .module.css
-  Navbar, Hero, Projects, Services, Marquee,
-  Testimonials, Contact, Footer
-  Photo.tsx         placeholder de imagem (aceita src real)
-  Reveal.tsx        animação de entrada no scroll
-lib/data.ts         textos, serviços e depoimentos
-styles/shared.module.css   wrap, section, heading, tag
+  layout.tsx        fontes, metadata, JSON-LD, <html>/<body>
+  page.tsx           composição das seções da home
+  sitemap.ts | robots.ts | manifest.ts
+  globals.css        design tokens (cores, tipografia) e reset
+
+components/           uma seção por arquivo
+  Navbar, Hero, Marquee, Projects, PracticeGrid,
+  Process, Contact, Footer, WhatsAppFloat
+  Photo.tsx           imagem com next/image (aceita placeholder sem src)
+  Reveal.tsx          animação de entrada no scroll
+  SmoothScroll.tsx    wrapper do Lenis
+
+lib/
+  data.ts             textos, projetos e links (edite aqui pra atualizar conteúdo)
+  ui.ts               classes Tailwind reaproveitadas entre seções
 ```
 
-## Trocar as imagens
+## Conteúdo e imagens
 
-Coloque os arquivos em `public/images/` e passe `src` para o componente `Photo`:
+Textos, projetos e o número do WhatsApp ficam centralizados em `lib/data.ts`.
+Fotos e logos de clientes vão em `public/images/`.
 
-```tsx
-<Photo src="/images/hero.jpg" alt="Foto de Alves R" className={styles.photo} />
-```
+## Cores
 
-Sem `src`, o componente mostra o placeholder cinza com a silhueta.
+Definidas como tokens em `app/globals.css`:
 
-Para usar o `next/image` (otimização automática), troque o `<img>` dentro de
-`components/Photo.tsx` por `<Image fill sizes="..." />`.
+| Variável         | Uso                       |
+| ---------------- | ------------------------- |
+| `--color-bg`      | fundo da página            |
+| `--color-ink`     | texto principal            |
+| `--color-accent`  | azul de destaque da marca  |
+| `--color-surface` | fundo de cards/blocos      |
 
-## Ajustar as cores
+## Contato
 
-Tudo vem de variáveis CSS em `app/globals.css`:
-
-| Variável      | Uso                          |
-| ------------- | ---------------------------- |
-| `--lime`      | azul de destaque da marca    |
-| `--bg`        | fundo da página (cinza)      |
-| `--surface`   | fundo dos blocos escuros     |
-| `--surface-2` | cartões e campos             |
-| `--ink`       | texto sobre fundo claro/azul |
-
-## Conteúdo
-
-Textos das seções ficam em `lib/data.ts`. Editar lá atualiza a página inteira.
-
-## Formulários
-
-`Contact.tsx` e `Footer.tsx` já têm estado local e `onSubmit`. Ligue sua rota
-(`app/api/...`) ou serviço de e-mail dentro do `handleSubmit`.
+- WhatsApp: via botão flutuante no site
+- [Instagram](https://www.instagram.com/alvesrsites/)
+- [LinkedIn](https://www.linkedin.com/in/l%C3%A1zaro-alves-r/)

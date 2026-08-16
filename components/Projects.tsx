@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 import { projects } from "@/lib/data";
 import { wrap, section, headRow, pillNote, pillNoteDot, heading } from "@/lib/ui";
 
-const AUTOPLAY_MS = 3200;
+const AUTOPLAY_MS = 4200;
 const GAP_PX = 24;
 
 function getSlideWidth() {
@@ -121,7 +121,7 @@ export default function Projects() {
           </div>
         </Reveal>
 
-        <Reveal>
+        <Reveal blur={false}>
           <div
             className="relative mt-11 overflow-hidden before:pointer-events-none before:absolute before:top-[10%] before:z-0 before:h-[80%] before:left-[calc((100%-var(--slide-width,62%))/2)] before:w-(--slide-width,62%) before:[background:radial-gradient(circle,rgba(46,107,255,0.28)_0%,rgba(46,107,255,0)_70%)] before:blur-2xl before:content-['']"
             onMouseEnter={() => setPaused(true)}
@@ -130,7 +130,7 @@ export default function Projects() {
           >
             <div
               onTransitionEnd={handleTrackTransitionEnd}
-              className={`relative z-1 flex gap-6 ease-[cubic-bezier(0.22,0.8,0.3,1)] ${withTransition ? "transition-transform duration-400" : ""}`}
+              className={`relative z-1 flex gap-6 ease-[cubic-bezier(0.16,1,0.3,1)] ${withTransition ? "transition-transform duration-650" : ""}`}
               style={{
                 transform: `translateX(calc(${centerOffset}% - ${position} * (${slideWidth}% + ${GAP_PX}px)))`,
               }}
@@ -183,7 +183,7 @@ export default function Projects() {
                   </>
                 );
 
-                const slideClassName = `group flex flex-[0_0_var(--slide-width,62%)] flex-col gap-4 text-inherit ${withTransition ? "transition-[opacity,transform] duration-400" : ""} ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-35"}`;
+                const slideClassName = `group flex flex-[0_0_var(--slide-width,62%)] flex-col gap-4 text-inherit ease-[cubic-bezier(0.16,1,0.3,1)] ${withTransition ? "transition-[opacity,transform] duration-650" : ""} ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-30"}`;
                 const key = `${project.name}-${i}`;
 
                 return project.url ? (
