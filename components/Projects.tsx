@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 import { projects } from "@/lib/data";
 import { wrap, section, headRow, pillNote, pillNoteDot, heading } from "@/lib/ui";
 
-const AUTOPLAY_MS = 3800;
+const AUTOPLAY_MS = 3200;
 const GAP_PX = 24;
 
 function getSlideWidth() {
@@ -130,7 +130,7 @@ export default function Projects() {
           >
             <div
               onTransitionEnd={handleTrackTransitionEnd}
-              className={`relative z-1 flex gap-6 ease-[cubic-bezier(0.22,0.8,0.3,1)] ${withTransition ? "transition-transform duration-450" : ""}`}
+              className={`relative z-1 flex gap-6 ease-[cubic-bezier(0.22,0.8,0.3,1)] ${withTransition ? "transition-transform duration-400" : ""}`}
               style={{
                 transform: `translateX(calc(${centerOffset}% - ${position} * (${slideWidth}% + ${GAP_PX}px)))`,
               }}
