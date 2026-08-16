@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Photo from "./Photo";
 import Reveal from "./Reveal";
 import { projects } from "@/lib/data";
@@ -26,7 +26,7 @@ export default function Projects() {
 
   const [position, setPosition] = useState(slideCount);
   const [withTransition, setWithTransition] = useState(true);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const isAnimatingRef = useRef(false);
   const [paused, setPaused] = useState(false);
   const [slideWidth, setSlideWidth] = useState(62);
   const centerOffset = (100 - slideWidth) / 2;
@@ -39,8 +39,8 @@ export default function Projects() {
   }, []);
 
   function goTo(nextPosition: number) {
-    if (isAnimating) return;
-    setIsAnimating(true);
+    if (isAnimatingRef.current) return;
+    isAnimatingRef.current = true;
     setWithTransition(true);
     setPosition(nextPosition);
   }
@@ -60,7 +60,7 @@ export default function Projects() {
       setPosition((p) => p - slideCount);
     }
 
-    setIsAnimating(false);
+    isAnimatingRef.current = false;
   }
 
   useEffect(() => {
