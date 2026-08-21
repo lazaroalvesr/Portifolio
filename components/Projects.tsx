@@ -5,6 +5,7 @@ import Photo from "./Photo";
 import Reveal from "./Reveal";
 import { projects } from "@/lib/data";
 import { wrap, section, headRow, pillNote, pillNoteDot, heading } from "@/lib/ui";
+import Link from "next/link";
 
 const AUTOPLAY_MS = 4200;
 const GAP_PX = 24;
@@ -170,6 +171,11 @@ export default function Projects() {
                             </span>
                           </div>
                         )}
+                        {project.conceptual && (
+                          <span className="absolute left-3 top-3 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 text-[10.5px] font-semibold tracking-[0.2px] text-white backdrop-blur-sm">
+                            Projeto conceitual
+                          </span>
+                        )}
                       </div>
                     </div>
 
@@ -187,7 +193,7 @@ export default function Projects() {
                 const key = `${project.name}-${i}`;
 
                 return project.url ? (
-                  <a
+                  <Link
                     key={key}
                     href={project.url}
                     target="_blank"
@@ -198,7 +204,7 @@ export default function Projects() {
                     tabIndex={isActive ? 0 : -1}
                   >
                     {content}
-                  </a>
+                  </Link>
                 ) : (
                   <div
                     key={key}

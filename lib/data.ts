@@ -1,5 +1,12 @@
 export type Testimonial = { name: string; role: string; quote: string };
-export type Project = { name: string; type: string; result: string; src?: string; url?: string };
+export type Project = {
+  name: string;
+  type: string;
+  result: string;
+  src?: string;
+  url?: string;
+  conceptual?: boolean;
+};
 export type ProcessStep = { num: string; title: string; description: string };
 
 const WHATSAPP_NUMBER = "5533999267947";
@@ -35,6 +42,14 @@ export const testimonials: Testimonial[] = [
 
 export const projects: Project[] = [
   {
+    name: "Dra. Geanne Lopes",
+    type: "Site para advocacia",
+    result:
+      "Site institucional + blog para escritório de advocacia, com foco em credibilidade e geração de contatos.",
+    src: "/images/customers/Dra_geanne_lopes.png",
+    url: "https://geannelopes.adv.br/",
+  },
+  {
     name: "MG Net",
     type: "Provedor de internet",
     result:
@@ -67,12 +82,13 @@ export const projects: Project[] = [
     url: "https://arrudabombas.com.br/",
   },
   {
-    name: "Dra. Geanne Lopes",
-    type: "Site para advocacia",
+    name: "Equilíbrio Nutrição",
+    type: "Nutrição comportamental",
     result:
-      "Site institucional + blog para escritório de advocacia, com foco em credibilidade e geração de contatos.",
-    src: "/images/customers/Dra_geanne_lopes.png",
-    url: "https://geannelopes.adv.br/",
+      "Projeto autoral: site institucional criado por conta própria para explorar posicionamento e apresentação de serviços de uma clínica de nutrição comportamental.",
+    src: "/images/customers/equipeNutricao.png",
+    url: "https://equilibrionutricao.vercel.app/",
+    conceptual: true,
   },
 ];
 
