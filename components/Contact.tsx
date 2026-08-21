@@ -1,9 +1,13 @@
 import Photo from "./Photo";
 import Reveal from "./Reveal";
 import { wrap, section, heading, pillNote, pillNoteDot } from "@/lib/ui";
-import { whatsappHref } from "@/lib/data";
+import { whatsappHref, projects } from "@/lib/data";
 
-const facts = ["Acompanhamento direto, sem terceirizado", "+5 projetos entregues", "Sites pensados para converter"];
+const facts = [
+  "Acompanhamento direto, sem terceirizado",
+  `+${projects.length} projetos no portfólio`,
+  "Sites pensados para converter",
+];
 
 export default function Contact() {
   return (

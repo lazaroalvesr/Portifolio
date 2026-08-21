@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Photo from "./Photo";
-import { whatsappHref } from "@/lib/data";
+import { whatsappHref, projects } from "@/lib/data";
 import { wrap } from "@/lib/ui";
 
 const heroInAnim = "animate-[hero-in_0.7s_cubic-bezier(0.22,0.8,0.3,1)_backwards]";
@@ -75,7 +75,7 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-[13px] font-semibold text-dim">
-                +{clientBadges.length} projetos entregues
+                +{projects.length} projetos no portfólio
               </span>
             </div>
           </div>
