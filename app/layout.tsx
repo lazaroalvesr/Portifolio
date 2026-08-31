@@ -124,6 +124,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={jakarta.variable}>
+      <meta name="google-site-verification" content="ILw8WVRQpG9MIcHiT3eHmZMGBOAusp7XugT-sbWrFw8" />
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
