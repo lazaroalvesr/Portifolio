@@ -50,6 +50,14 @@ export const projects: Project[] = [
     url: "https://geannelopes.adv.br/",
   },
   {
+    name: "Dra. Bruna Teixeira Cardoso",
+    type: "Site para advocacia",
+    result:
+      "Site institucional para escritório de advocacia, com foco em credibilidade e geração de contatos.",
+    src: "/images/customers/draBrunaTeixeira.png",
+    url: "https://brunateixeiraadv.com.br/",
+  },
+  {
     name: "MG Net",
     type: "Provedor de internet",
     result:
