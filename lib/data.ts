@@ -58,6 +58,14 @@ export const projects: Project[] = [
     url: "https://brunateixeiraadv.com.br/",
   },
   {
+    name: "Dra. Thaysa Milanez",
+    type: "Site institucional para advocacia",
+    result:
+      "Site para apresentar a atuação do escritório, publicar artigos e facilitar o contato com clientes.",
+    src: "/images/customers/drathaysa.png",
+    url: "https://thaysamilanezadvocacia.com.br/",
+  },
+  {
     name: "MG Net",
     type: "Provedor de internet",
     result:
@@ -86,7 +94,7 @@ export const projects: Project[] = [
     type: "Site institucional",
     result:
       "Site institucional para empresa de equipamentos, com foco em presença digital e apresentação de produtos.",
-    src: "/images/customers/arruda-bombas.png",
+    src: "/images/customers/arruda-bombas-new.png",
     url: "https://arrudabombas.com.br/",
   },
   {
