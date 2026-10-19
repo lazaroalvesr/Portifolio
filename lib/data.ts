@@ -58,6 +58,14 @@ export const projects: Project[] = [
     url: "https://brunateixeiraadv.com.br/",
   },
   {
+    name: "Advogada das Mamães",
+    type: "Site para advocacia voltada a gestantes e mães",
+    result:
+      "Site para apresentar a atuação da Dra. Thaysa, publicar artigos sobre direitos de gestantes e mães e facilitar o contato.",
+    src: "/images/customers/aadvogadadasmamaes.png",
+    url: "https://aadvogadadasmamaes.com.br/",
+  },
+  {
     name: "Dra. Thaysa Milanez",
     type: "Site institucional para advocacia",
     result:
