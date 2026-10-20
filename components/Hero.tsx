@@ -85,7 +85,7 @@ export default function Hero() {
           className={`relative mx-auto aspect-4/5 w-full max-w-105 overflow-hidden rounded-xl bg-ink shadow-[0_30px_60px_rgba(16,25,43,0.25)] ${heroInAnim} [animation-delay:0.15s]`}
         >
           <Photo
-            src="/images/alves-r.jpg"
+            src="/images/photo.png"
             alt="Lázaro Alves"
             className="h-full w-full"
             sizes="(max-width: 980px) 90vw, 420px"

@@ -17,7 +17,7 @@ export default function Contact() {
           <div className="grid grid-cols-[0.85fr_1.15fr] items-center gap-14 max-[980px]:grid-cols-1 max-[980px]:gap-10">
             <div className="relative mx-auto aspect-4/5 w-full max-w-100 overflow-hidden rounded-xl bg-ink shadow-[0_30px_60px_rgba(16,25,43,0.2)]">
               <Photo
-                src="/images/alves-r.jpg"
+                src="/images/photo.png"
                 alt="Lázaro Alves"
                 className="h-full w-full"
                 sizes="(max-width: 980px) 90vw, 400px"
@@ -35,8 +35,6 @@ export default function Contact() {
             </div>
 
             <div>
-              <p className="text-xs font-bold tracking-[2px] text-dim uppercase">Sobre</p>
-
               <h2 className={`${heading} mt-4`}>Do primeiro contato à entrega, é comigo que você fala.</h2>
 
               <p className="mt-4 max-w-125 text-[13.5px] leading-[1.7] text-dim">
