@@ -12,7 +12,7 @@ const items = [
   {
     title: "Sites institucionais",
     description: "Sites rápidos, responsivos e fáceis de atualizar, feitos sob medida para o seu negócio.",
-    src: "/images/customers/arruda-bombas.png",
+    src: "/images/customers/arruda-bombas-new.png",
   },
   {
     title: "Sistemas personalizados",
